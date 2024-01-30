@@ -52,10 +52,15 @@ export const themeConfig: DefaultTheme.Config = {
     },
     notFound: {
         title: '页面未找到',
-        linkText: "返回首页"
+        linkText: "返回首页",
+        linkLabel: '返回首页',
+        quote: '这里一片荒原……'
     },
-
     socialLinks: [
         { icon: 'github', link: 'https://github.com/CadenSkyHub' }
-    ]
+    ],
+    editLink: {
+        pattern: 'https://github.com/CadenSkyHub/CadenSkyHub.github.io/tree/main/docs/:path',
+        text: '在 GitHub 编辑此页'
+    }
 }

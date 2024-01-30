@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: GitHub
-      link: /guide/what-is-vitepress
+      link: https://github.com/CadenSkyHub
     - theme: alt
       text: VitePress
       link: /vitepress/1_begin/1_begin
@@ -23,8 +23,6 @@ features:
   - icon: 😉
     title: 感情，还算满意
     details: 情深意浓，相互陪伴，共同成长，温馨幸福，珍惜缘分，未来可期...
-    linkText: 谷歌一下
-    link: https://www.google.com
   - icon: 🤔
     title: 人生，千奇百怪
     details: 充满挑战与惊喜，跌宕起伏，体验多彩，奋发向前，创造精彩...
@@ -38,3 +36,15 @@ features:
     title: 心态，永远年轻
     details: 心态，永远年轻，保持好奇，充满激情，勇敢追梦，拥抱未来，活出生命的活力...
 ---
+
+
+<script setup>
+  import { onMounted } from 'vue'
+  onMounted(()=>{
+    const tagLine = document.querySelector('.tagline')
+    setInterval(()=>{
+        const date = new Date()
+        tagLine.innerText = date.toLocaleString().replaceAll('/', '-')
+    },1000)
+  })
+</script>
