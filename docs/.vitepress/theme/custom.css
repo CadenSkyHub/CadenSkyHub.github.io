@@ -1,0 +1,9 @@
+.escape-demo{
+    border: 1px solid var(--vp-c-border);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.VPContent .VPHome .VPHero .container .main .text{
+    margin-top: 10px;
+}
