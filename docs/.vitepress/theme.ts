@@ -5,7 +5,7 @@ import { vitePressSideBar } from "../vitepress/sidebar";
 export const themeConfig: DefaultTheme.Config = {
     siteTitle: "< ~/ > MyNote",
     logo: "/public/logo.png",
-    
+
 
     outline: [2, 3],
     outlineTitle: '在本页中',
@@ -18,6 +18,7 @@ export const themeConfig: DefaultTheme.Config = {
     sidebar: {
         '/vitepress/': vitePressSideBar,
     },
+
     search: {
         provider: 'local',
         options: {
@@ -38,6 +39,7 @@ export const themeConfig: DefaultTheme.Config = {
             }
         }
     },
+
     lightModeSwitchTitle: '切换至暗色主题',
     darkModeSwitchTitle: '切换至亮色主题',
     darkModeSwitchLabel: '切换主题',
@@ -50,5 +52,9 @@ export const themeConfig: DefaultTheme.Config = {
     notFound: {
         title: '页面未找到',
         linkText: "返回首页"
-    }
+    },
+
+    socialLinks: [
+        { icon: 'github', link: 'https://github.com/CadenSkyHub' }
+    ]
 }
