@@ -4,8 +4,7 @@ import { vitePressSideBar } from "../vitepress/sidebar";
 
 export const themeConfig: DefaultTheme.Config = {
     siteTitle: "< ~/ > MyNote",
-    logo: "/public/logo.png",
-
+    logo: "/logo.png",
 
     outline: [2, 3],
     outlineTitle: '在本页中',

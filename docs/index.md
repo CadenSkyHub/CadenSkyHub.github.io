@@ -6,7 +6,7 @@ hero:
   text: 我的学习笔记站点.
   tagline: 忘 了 初 心，也 能 始 终 吧...
   image:
-    src: /public/logo.png
+    src: /logo.png
     alt: MyNote
   actions:
     - theme: brand
