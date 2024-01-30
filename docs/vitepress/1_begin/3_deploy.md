@@ -4,6 +4,16 @@
 
 ## 部署到 GitHub
 
+::: details 如何不带仓库名访问
+
+创建仓库时，仓库名字要为： `<githubName>.github.io`。
+
+没错，**仓库名字** ，需要带上自己的 `githubId` + `.github.io`
+
+:::
+
+
+
 1. 在项目的 `.github/workflows` 目录中创建一个名为 `deploy.yml` 的文件，内容如下：
 
 ``` yaml

@@ -1,6 +1,7 @@
 import { DefaultTheme } from "vitepress";
 import { nav } from "./nav";
 import { vitePressSideBar } from "../vitepress/sidebar";
+import { javascriptSideBar } from "../front/javascript/sidebar";
 
 export const themeConfig: DefaultTheme.Config = {
     siteTitle: "< ~/ > MyNote",
@@ -16,6 +17,7 @@ export const themeConfig: DefaultTheme.Config = {
     nav,
     sidebar: {
         '/vitepress/': vitePressSideBar,
+        '/front/javascript/': javascriptSideBar,
     },
 
     search: {
