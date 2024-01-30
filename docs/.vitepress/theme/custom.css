@@ -1,9 +1,39 @@
-.escape-demo{
+.escape-demo {
     border: 1px solid var(--vp-c-border);
     border-radius: 8px;
     padding: 20px;
 }
 
-.VPContent .VPHome .VPHero .container .main .text{
+.VPContent .VPHome .VPHero .container .main .text {
     margin-top: 10px;
+}
+
+/* font */
+
+@font-face {
+    font-family: 'AliPuHui';
+    src: url('./font/zh/AlibabaPuHui-Bold.woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'AliPuHui';
+    src: url('./font/zh/AlibabaPuHui-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'AliPuHui';
+    src: url('./font/zh/AlibabaPuHui-Light.woff2');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('./font/en/JetBrainsMono.woff2');
+}
+
+:root {
+    --vp-font-family-base: 'AliPuHui';
+    --vp-font-family-mono: 'JetBrainsMono'
 }
