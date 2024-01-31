@@ -81,7 +81,3 @@ export default {
 ````
 
 :::
-
-
-
-<div class='escape-demo'>ABCD</div>
