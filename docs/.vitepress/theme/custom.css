@@ -4,8 +4,14 @@
     padding: 20px;
 }
 
+/* 调整首页间距 */
 .VPContent .VPHome .VPHero .container .main .text {
     margin-top: 10px;
+}
+
+/* 将 H1 居中 */
+.vp-doc h1 {
+    text-align: center;
 }
 
 /* font */
