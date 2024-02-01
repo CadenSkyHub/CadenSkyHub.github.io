@@ -25,7 +25,8 @@ export const javascriptSideBar: DefaultTheme.SidebarItem[] = [
             { text: '序列化', link: '/front/javascript/2_advanced/4_serialization' },
             { text: 'Promise', link: '/front/javascript/2_advanced/5_promise' },
             { text: 'Async', link: '/front/javascript/2_advanced/6_async' },
-            { text: '模块化', link: '/front/javascript/2_advanced/7_module' },
+            { text: 'ES模块化', link: '/front/javascript/2_advanced/7_module' },
+            { text: 'commonJS模块化', link: '/front/javascript/2_advanced/8_common_module' },
         ],
         collapsed: true
     },
