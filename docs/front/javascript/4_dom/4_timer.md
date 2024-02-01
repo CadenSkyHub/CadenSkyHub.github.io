@@ -118,6 +118,10 @@ setInterval(() => {
 
 `setTimeout()` 为`BOM`对象，也就是属于 `window` 下的
 
+> [!caution] 注意
+>
+> `setTimeout()` 为异步函数
+
 ### 开启定时函数
 
 ``` javascript

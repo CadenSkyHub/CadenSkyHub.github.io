@@ -193,6 +193,55 @@ console.log(compute(1, 2, (a, b) => a - b)) // -1
 
 
 
+## 回调函数
+
+本质上就是通过传入一个函数作为参数，来获取执行结果。
+
+- 函数内，通过调用这个函数，然后将结果作为实参传入。
+- 调用这个函数时，传入一个函数，这个函数的形参，就为上个函数的实参，也就是结果。
+
+``` javascript {2}
+const sum = (a, b, callback) => {
+    callback(a + b)
+}
+
+sum(1, 3, (result) => {
+    console.log(`我拿到结果了，是${result}`);
+})
+```
+
+> [!tip] 作用
+>
+> 通常，回调函数用于处理简单的异步，因为 **异步是无法通过 `return`** 来获取结果的,
+>
+> `setTimeout()` 是一个正八经的异步函数，通常用于延迟执行。
+
+``` javascript
+/* 
+* 这段代码的意思是 两秒后执行 a + b
+* 但是异步无法直接 return a + b
+* 所以通过 回调函数 来获取最终结果
+**/
+const getResult = (a, b, callback) => {
+    setTimeout(() => { 	// [!code focus:3]
+        callback(a + b)
+    }, 2000);
+}
+
+
+getResult(1, 3, result => {
+    console.log(result);
+})
+```
+
+
+
+
+
+
+
+
+
 ## 函数返回值
 
 
