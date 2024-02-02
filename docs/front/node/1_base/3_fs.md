@@ -105,7 +105,7 @@ fs.mkdir(dirPath)	// [!code focus:3]
 
 
 
-```javascript [递归创建]
+```javascript [递归创建] {6}
 import fs from 'fs/promises'
 import path from "path";
 
