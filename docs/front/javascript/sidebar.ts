@@ -13,8 +13,7 @@ export const javascriptSideBar: DefaultTheme.SidebarItem[] = [
             { text: '函数', link: '/front/javascript/1_begin/7_function' },
             { text: '严格模式', link: '/front/javascript/1_begin/8_strict_mode' },
             { text: '数组', link: '/front/javascript/1_begin/9_array' },
-        ],
-        collapsed: true,
+        ]
     },
     {
         text: '进阶',
