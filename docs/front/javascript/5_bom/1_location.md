@@ -6,7 +6,7 @@
 
 ## 详情
 
-`// http://localhost:63342/JsLearn/index.html?_ijt=n0ikact5n5mh2n2uiubrle5ta5&_ij_reload=RELOAD_ON_SAVE`
+`http://localhost:63342/JsLearn/index.html?_ijt=n0ikact5n5mh2n2uiubrle5ta5&_ij_reload=RELOAD_ON_SAVE`
 
 ```javascript
 console.log({
