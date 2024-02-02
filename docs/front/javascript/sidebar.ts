@@ -26,6 +26,7 @@ export const javascriptSideBar: DefaultTheme.SidebarItem[] = [
             { text: 'Async', link: '/front/javascript/2_advanced/6_async' },
             { text: 'ES模块化', link: '/front/javascript/2_advanced/7_module' },
             { text: 'commonJS模块化', link: '/front/javascript/2_advanced/8_common_module' },
+            { text: '错误处理', link: '/front/javascript/2_advanced/9_error' },
         ],
         collapsed: true
     },
