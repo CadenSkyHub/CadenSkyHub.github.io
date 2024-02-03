@@ -170,8 +170,8 @@ req.headers	// [!code focus]
 
 
 ``` javascript [获取单个]
-console.log('host')
-console.log('no-head')
+console.log(req.get('host'))
+console.log(req.get('noHead'))
 
 /*
 0.0.0.0:3000
