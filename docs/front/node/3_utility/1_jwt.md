@@ -1,8 +1,9 @@
 # JsonWebToken
 
+官方文档：[jsonwebtoken - npm](https://www.npmjs.com/package/jsonwebtoken)
+
 我们使用第三方来创建以及校验 `token`
 
-包地址：[jsonwebtoken - npm](https://www.npmjs.com/package/jsonwebtoken)
 
 `jsonwebtoken` 生成与校验有同步和异步方法，具体是是否传入 `callback` 函数来确认的
 
