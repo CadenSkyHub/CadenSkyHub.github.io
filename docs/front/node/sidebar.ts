@@ -17,6 +17,7 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
             { text: '响应', link: '/front/node/2_express/3_response' },
             { text: '路由', link: '/front/node/2_express/4_router' },
             { text: '文件', link: '/front/node/2_express/5_file' },
+            { text: 'JWT', link: '/front/node/2_express/6_jwt' },
         ]
     },
     {
