@@ -23,6 +23,7 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
         text: '实用工具',
         items: [
             { text: 'JWT', link: '/front/node/3_utility/1_jwt' },
+            { text: 'Dotenv', link: '/front/node/3_utility/2_dotenv' },
         ]
     },
     {
