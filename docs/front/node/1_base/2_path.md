@@ -8,7 +8,7 @@
 
 用来生成一个绝对路径
 
-- 如果直接调用 `resolve()` 则会直接返回当前工作目录。
+- 如果直接调用 `resolve()` 则会直接返回当前运行目录。
 
     通过不同的方式执行时，工作目录是会发生变化的，因为是绝对路径
 
@@ -20,7 +20,7 @@
 
     一般，我们会传入两个参数
 
-    ​	一个是工作目录的绝对路径
+    ​	一个是当前工作目录的绝对路径
 
     ​	一个是相对路径
 
@@ -75,7 +75,7 @@ console.log(safeComPath)    // F:\nodejs\src
 
 > [!tip] 提示
 >
-> 在 `node v20.10.0` 版本后，可直接使用 `import.meta.filename` 和 `import.meta.dirname` 来获取文件路径和文件夹路径
+> 在 `node v20.10.0` 版本后，可直接使用 `import.meta.filename` 和 `import.meta.dirname` 来获取当前文件路径和文件夹路径
 >
 > ```javascript
 > const filename = import.meta.filename	// [!code ++]
