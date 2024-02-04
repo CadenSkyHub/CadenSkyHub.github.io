@@ -1,16 +1,14 @@
 # dotenv
 
+官方文档：[Dotenv](https://www.dotenv.org/docs/quickstart)
 
-
-> [!tip] 
+> [!tip] 介绍
 >
 > `Node` 开箱即支持环境变量，并且可以通过 `process.env` 访问。
 >
 > `dotenv` 可以从 `.env` 文件中自动加载环境变量到 `process.env` 对象。
 >
 > `dotenv` 支持 `js`、`python`、`golang`、`php` 等语言
-
-官方文档：[Dotenv](https://www.dotenv.org/docs/quickstart)
 
 
 
