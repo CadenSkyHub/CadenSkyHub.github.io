@@ -26,6 +26,7 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
         items: [
             { text: 'JWT', link: '/front/node/3_utility/1_jwt' },
             { text: 'Dotenv', link: '/front/node/3_utility/2_dotenv' },
+            { text: 'Zod', link: '/front/node/3_utility/3_zod' },
         ],
         collapsed: true
     },
