@@ -10,5 +10,6 @@ export const nav: DefaultTheme.NavItem[] = [
             {text:'TypeScript', link:'/front/typescript/1_begin'},
             {text:'Node', link:'/front/node/1_base/1_npm'},
         ]
-    }
+    },
+    {text:'Tools', link:'/tools/fnm/Fnm'}
 ]
