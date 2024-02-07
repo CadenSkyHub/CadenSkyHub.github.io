@@ -1,5 +1,14 @@
 # Fnm
 
+
+
+- Windows下载地址：[Schniz/fnm (github.com)](https://github.com/Schniz/fnm/releases)
+- 官方 Github ： [Schniz/fnm：🚀快速简单的 Node.js版本管理器(github.com)](https://github.com/Schniz/fnm#shell-setup)
+- 参考：
+    - [Windows 上使用 fnm 安裝 Node.js - Oldest Dream](https://oldestdream.com/2022/04/windows-install-nodejs-with-fnm/#:~:text=%E5%AE%89%E8%A3%9D)
+    - [windows 安装fnm node版本管理工具](https://my.oschina.net/gfcm/blog/5712706)
+    - [安装 Fast Node Manager (fnm) 以管理 Nodejs 版本 (molingran.com)](https://www.molingran.com/p/use-fnm/)
+
 | 命令                 | 说明                          |
 | -------------------- | ----------------------------- |
 | `fnm --version`      | 查看版本                      |
@@ -11,17 +20,6 @@
 | `fnm ls`             | 列出已安装的版本              |
 | `fnm use 版本`       | 切换当前`shell`中的`node`版本 |
 | `fnm default 版本`   | 设置默认版本，全局            |
-
-
-
-- Windows下载地址：[Schniz/fnm (github.com)](https://github.com/Schniz/fnm/releases)
-- 官方 Github ： [Schniz/fnm：🚀快速简单的 Node.js版本管理器(github.com)](https://github.com/Schniz/fnm#shell-setup)
-- 参考：
-    - [Windows 上使用 fnm 安裝 Node.js - Oldest Dream](https://oldestdream.com/2022/04/windows-install-nodejs-with-fnm/#:~:text=%E5%AE%89%E8%A3%9D)
-    - [windows 安装fnm node版本管理工具](https://my.oschina.net/gfcm/blog/5712706)
-    - [安装 Fast Node Manager (fnm) 以管理 Nodejs 版本 (molingran.com)](https://www.molingran.com/p/use-fnm/)
-
-
 
 ## 安装
 
