@@ -139,7 +139,7 @@ fs.rmdir(dirPath)	// [!code focus:3]
 
 删除文件或目录
 
-> ![warning] 重要提示
+> [!warning] 重要提示
 >
 > 递归删除注意了，会删除文件夹下所有所有的内容
 
