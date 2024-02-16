@@ -101,8 +101,9 @@ curl -fsSL https://fnm.vercel.app/install | bash -s -- --install-dir "./.fnm" --
 
 如果上面一直没反应，挂代理，强制模式。
 
+**手动安装**
 
-
+[与 `Linux` 同过程](#_2-linux)，如果使用 `zsh` ，文件在 `~/.zshrc` 下
 
 
 ## 配置（使用之前）
