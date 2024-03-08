@@ -26,7 +26,7 @@ export const toolSideBar: DefaultTheme.SidebarItem[] = [
             { text: '开始', link: "/tools/docker/1_docker" },
             { text: '命令', link: "/tools/docker/2_commands" },
             { text: 'dockerfile', link: "/tools/docker/3_dockerfile" },
-            { text: '镜像', link: "/tools/docker/3_images" },
+            { text: '镜像', link: "/tools/docker/4_images" },
         ],
         collapsed: true
     },
