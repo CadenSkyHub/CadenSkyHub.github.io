@@ -20,4 +20,14 @@ export const toolSideBar: DefaultTheme.SidebarItem[] = [
         ],
         collapsed: true
     },
+    {
+        text: "Docker",
+        items: [
+            { text: '开始', link: "/tools/docker/1_docker" },
+            { text: '命令', link: "/tools/docker/2_commands" },
+            { text: 'dockerfile', link: "/tools/docker/3_dockerfile" },
+            { text: '镜像', link: "/tools/docker/3_images" },
+        ],
+        collapsed: true
+    },
 ]
