@@ -37,8 +37,8 @@ docker run --name nginx -d -p 80:80 nginx
 1. 宿主机创建文件夹
 
     ``` bash
-    mkdir nginx/logs			# 日志
-    mkdir nginx/conf			# 配置
+    mkdir /docker/nginx/logs			# 日志
+    mkdir /docker/nginx/conf			# 配置
     ```
 
 2. 复制文件到对应目录
