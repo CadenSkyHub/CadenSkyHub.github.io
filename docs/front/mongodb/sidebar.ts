@@ -14,6 +14,8 @@ export const mongodbSideBar:DefaultTheme.SidebarItem[] = [
             {text:'更新', link:'/front/mongodb/7_update_document'},
             {text:'查询', link:'/front/mongodb/8_find_document'},
             {text:'操作符', link:'/front/mongodb/9_operate_symbol'},
+            {text:'嵌套文档', link:'/front/mongodb/10_find_object'},
+            {text:'嵌套数组', link:'/front/mongodb/11_find_array'},
         ]
     },
     {
