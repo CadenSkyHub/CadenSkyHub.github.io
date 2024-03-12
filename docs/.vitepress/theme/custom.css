@@ -19,6 +19,13 @@
     margin: 0 auto;
 }
 
+/* 文档内所有表格为 100% 宽度 */
+.vp-doc table{
+    display: table;
+    min-width: 100%;
+}
+
+
 /* font */
 
 @font-face {
