@@ -11,7 +11,7 @@ db.size.insertMany(
 )
 ```
 
-> [!note] 注意
+> [!important] 注意
 >
 > 使用点表示法进行查询时，字段和嵌套字段必须位于引号内。
 
