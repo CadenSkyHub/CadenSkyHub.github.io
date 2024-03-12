@@ -7,8 +7,7 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
             { text: 'npm', link: '/front/node/1_base/1_npm' },
             { text: 'path', link: '/front/node/1_base/2_path' },
             { text: 'fs', link: '/front/node/1_base/3_fs' },
-        ],
-        collapsed: true
+        ]
     },
     {
         text: 'Express',
@@ -18,8 +17,7 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
             { text: '响应', link: '/front/node/2_express/3_response' },
             { text: '路由', link: '/front/node/2_express/4_router' },
             { text: '文件', link: '/front/node/2_express/5_file' }
-        ],
-        collapsed: true
+        ]
     },
     {
         text: '实用工具',
@@ -27,8 +25,7 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
             { text: 'JWT', link: '/front/node/3_utility/1_jwt' },
             { text: 'Dotenv', link: '/front/node/3_utility/2_dotenv' },
             { text: 'Zod', link: '/front/node/3_utility/3_zod' },
-        ],
-        collapsed: true
+        ]
     },
     {
         text: 'new',

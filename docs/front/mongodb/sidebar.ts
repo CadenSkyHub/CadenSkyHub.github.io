@@ -3,7 +3,6 @@ import { DefaultTheme } from "vitepress";
 export const mongodbSideBar:DefaultTheme.SidebarItem[] = [
     {
         text:'Mongodb',
-        collapsed:true,
         items:[
             {text:'安装', link:'/front/mongodb/1_install'},
             {text:'用户管理', link:'/front/mongodb/2_user_manage'},

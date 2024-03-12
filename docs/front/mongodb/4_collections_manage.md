@@ -20,5 +20,8 @@
 >
 > ``` bash
 > db.collection.drop()
+> 
+> # 示例，删除 users 集合
+> db.users.drop()
 > ```
 
