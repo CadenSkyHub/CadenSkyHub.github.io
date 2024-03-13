@@ -106,7 +106,92 @@ db.collection.find( <query>, <projection>, <options> )
 
 
 
-## 排序
+## 排序查询
 
-## 索引
+> [!tip] 说明
+>
+> `$sort`:排序
+>
+> - `1`：正序
+> - `-1`：倒序
+
+查询所有数据，按照 `qty` 正序查询
+
+```javascript {2}
+db.students.aggregate([
+    { $sort: {qty:1} }
+])
+```
+
+
+
+
+
+## 分页查询
+
+> [!tip] 提示
+>
+> `$skip`： 跳过前面几条数据
+>
+> `$limit`：限制返回的数据条数
+
+
+
+> [!important] 算法
+>
+> ``` javascript
+> skip = (pageNumber - 1) * pageSize
+> ```
+>
+> - `pageSize`： 每页显示的数据条数 
+> - `pageNumber`： 要查询的页数
+
+
+
+1. 查询前两条数据
+
+    ``` javascript
+    db.students.aggregate( 
+        [ 
+            { $limit:2 }
+        ] 
+    )
+    ```
+
+2. 每页显示两条，显示第二页信息
+
+    ``` javascript
+    db.students.aggregate(
+        [
+            { $skip:2 },
+            { $limit:2 }
+        ]
+    )
+    ```
+
+3. 根据 `qty` 正序，每页显示两条，显示第二页数据
+
+    ``` javascript
+    db.students.aggregate(
+        [
+            { $sort: { qty: 1} },
+            { $skip: 2 },
+            { $limit: 2 }
+        ]
+    )
+    ```
+
+
+
+## 计数
+
+> [!tip] 方法
+>
+> `db.col.countDocuments() `获取符合特定查询条件的文档数量。
+
+计算 `qty > 20` 的文档数量
+
+``` javascript
+db.students.countDocuments({qty:{$gt:50}})
+```
 

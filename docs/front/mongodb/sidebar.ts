@@ -15,6 +15,8 @@ export const mongodbSideBar:DefaultTheme.SidebarItem[] = [
             {text:'操作符', link:'/front/mongodb/9_operate_symbol'},
             {text:'嵌套文档', link:'/front/mongodb/10_find_object'},
             {text:'嵌套数组', link:'/front/mongodb/11_find_array'},
+            {text:'聚合管道', link:'/front/mongodb/12_aggregation'},
+            {text:'聚合函数', link:'/front/mongodb/13_aggregate_func'},
         ]
     },
     {

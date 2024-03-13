@@ -1,5 +1,11 @@
 # 嵌套数组
 
+> [!tip] 操作
+>
+> - `$push`: 向数组中添加一个或多个元素。
+> - `$pull`: 从数组中删除匹配特定条件的元素。
+> - `$pop`: 从数组中删除第一个或最后一个元素。
+
 ```javascript
 db.like.insertMany([
     { like:['吃','喝','玩','乐'], name:'张三', number:[1,10,20] },
@@ -11,13 +17,172 @@ db.like.insertMany([
 
 ## 新增
 
+`$push`
 
+### 追加单个
+
+向 `{name:张三}` 文档的 `like` 新增 `嫖`
+
+```javascript
+db.like.updateOne(
+    { name:'张三' },
+    { $push:{ like:'嫖' } }
+)
+```
+
+::: details 结果
+
+``` javascript {3}
+{
+  _id: ObjectId('65f01a96c66ad1456dc89237'),
+  like: [ '吃', '喝', '玩', '乐', '嫖' ],
+  name: '张三',
+  number: [ 1, 10, 20 ]
+}
+```
+
+:::
+
+### 追加多个
+
+向 `{name:张三}` 文档的 `like` 新增 `A,B,C,D`
+
+``` javascript
+db.like.updateOne(
+    {name:'张三'},
+    {$push:{ like:{ $each:['A','B','C','D'] } }}
+)
+```
+
+::: details 结果
+
+``` javascript {3}
+{
+  _id: ObjectId('65f01a96c66ad1456dc89237'),
+  like: ['吃', '喝', '玩','乐', '嫖', 'A','B',  'C',  'D'],
+  name: '张三',
+  number: [ 1, 10, 20 ]
+}
+```
+
+:::
 
 ## 删除
+
+`$pull`
+
+### 删除单个
+
+
+
+```javascript
+db.like.updateOne(
+    { name:'张三' },
+    { $pull:{ like:'嫖' } }
+)
+```
+
+::: details 结果
+
+``` javascript {3}
+{
+  _id: ObjectId('65f01a96c66ad1456dc89237'),
+  like: ['吃', '喝', '玩','乐', 'A',  'B','C',  'D'],
+  name: '张三',
+  number: [ 1, 10, 20 ]
+}
+```
+
+:::
+
+### 删除多个
+
+删除 `{name:张三}` 文档 `like` 的 `A,B,C,D`
+
+```javascript
+db.like.updateOne(
+    { name:'张三' },
+    { $pull: { like: { $in: ['A','B','C','D'] } } }
+)
+```
+
+::: details 结果
+
+``` javascript {3}
+{
+  _id: ObjectId('65f01a96c66ad1456dc89237'),
+  like: [ '吃', '喝', '玩', '乐' ],
+  name: '张三',
+  number: [ 1, 10, 20 ]
+}
+```
+
+:::
+
+
+
+### 删除前后
+
+> [!tip] 语法
+>
+> ``` javascript
+> { $pop: { <field>: <-1 | 1>, ... } }
+> ```
+>
+> - `-1`：前
+> - `1`：后
+
+- 删除 `{name:张三}` 文档 `like` 的 第一个元素
+
+    ```javascript
+    db.like.updateOne(
+        { name:'张三' },
+        { $pop: { like:-1 } }
+    )
+    ```
+
+- 删除 `{name:张三}` 文档 `like` 的 最后一个元素
+
+    ``` javascript
+    db.like.updateOne(
+        { name:'张三' },
+        { $pop: { like:1 } }
+    )
+    ```
 
 
 
 ## 更新
+
+> [!important] 注意
+>
+>  `$` 定位符
+>
+> 使用点表示法进行查询时，字段和嵌套字段必须位于引号内。
+
+
+
+将 `{name:张三}` 文档的 like 中 `嫖` 更新为 `赌`
+
+```javascript {2-3}
+db.like.updateOne(
+    { name:'张三', like:'嫖' },	// [!code ++]
+    { $set:{ 'like.$':'赌' } }	// [!code ++]
+)
+```
+
+::: details 结果
+
+``` javascript {3}
+{
+  _id: ObjectId('65f01a96c66ad1456dc89237'),
+  like: ['喝', '玩', '乐','A',  'B',  'C','赌'],
+  name: '张三',
+  number: [ 1, 10, 20 ]
+}
+```
+
+:::
 
 
 
@@ -221,6 +386,8 @@ db.like.find({ number:{$elemMatch:{$eq:1, $lt:60}} })
 
 > [!important] 注意
 >
+> 索引从 `0` 开始
+>
 > 使用点表示法进行查询时，字段和嵌套字段必须位于引号内。
 
 查询 `number` 数组中，第 `2` 位为 `70` 的文档
@@ -251,8 +418,10 @@ db.like.find({ 'number.1':70 })
 > [!tip] 提示
 >
 > 使用 `$size` 运算符按元素的数量查询数组。
+>
+> 注意：这里只能计算 `number`
 
-查找 `number` 数量至少包含 `5` 个
+查找 `number` 数量，长度至少包含 `5` 个
 
 ``` javascript
 db.like.find({ number:{ $size:5 } })
@@ -265,6 +434,8 @@ null
 ```
 
 :::
+
+
 
 
 
