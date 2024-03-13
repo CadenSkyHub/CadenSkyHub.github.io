@@ -289,6 +289,16 @@ const userSchema = z.object({
 })
 ```
 
+高级使用
+
+``` typescript
+const schema = z.nullable(z.boolean())	// true | false | null
+```
+
+
+
+
+
 
 
 ## 联合类型
