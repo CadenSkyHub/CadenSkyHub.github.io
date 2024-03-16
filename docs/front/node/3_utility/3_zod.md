@@ -297,6 +297,15 @@ const schema = z.nullable(z.boolean())	// true | false | null
 
 
 
+## 自定类型
+
+`.instanceof()`
+
+``` typescript
+// 例如： mongodb 的 ObjectId 类型
+z.instanceof(ObjectId)
+```
+
 
 
 
