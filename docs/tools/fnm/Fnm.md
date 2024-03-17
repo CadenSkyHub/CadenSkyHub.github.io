@@ -197,12 +197,48 @@ export FNM_DIR=目录位置
 
 
 
-## npm 设置 阿里云源
+## 配置镜像
 
-**全局配置**
+在使用 `npm` 时，你可以通过配置镜像源来提高包的下载速度，尤其是在国内网络环境下。
 
-这里的全局指的是 某版本的全局，而不是系统的全局
+1. 查看当前配置
 
-```
-npm config set registry http://registry.npmmirror.com
-```
+    ``` bash
+    npm config list
+    # 查看全部配置
+    npm config list ls -l
+    ```
+
+2. 设置镜像源
+
+    [阿里巴巴镜像站](https://developer.aliyun.com/mirror/NPM?spm=a2c6h.13651102.0.0.30da1b11MCJsYX)
+
+    ``` bash
+    npm config set registry https://registry.npmmirror.com
+    ```
+
+3. 验证
+
+    可以再次运行 `npm config list` 确认是否已经成功修改 registry 配置项。
+
+> [!caution] 警告
+>
+> 如果在安装一个包后一直不动，可能是因为阿里源没有实现 `audit`
+>
+> ``` bash
+> # 禁用本地 audit
+> npm set audit false
+> ```
+>
+> **参考：**[阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/NPM?spm=a2c6h.13651102.0.0.30da1b11MCJsYX)
+>
+> ![image-20240309172458764](./assets/image-20240309172458764.png)
+
+
+
+> [!tip] 切换回默认配置
+>
+> ``` bash
+> npm config set registry https://registry.npmjs.org
+> ```
+
