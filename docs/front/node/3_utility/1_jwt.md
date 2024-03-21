@@ -196,3 +196,102 @@ try {
 ```
 
 :::
+
+
+
+
+
+## 实例
+
+结合 `express` 封装的 `token` 解析
+
+::: details 示例
+
+```typescript
+import {sign, verify} from 'jsonwebtoken'
+import {NextFunction, Request, Response} from "express";
+
+// 解析出来的 token 返回这种数据
+interface JwtData {
+    exp?: number
+    iot?: number
+    data: object
+}
+
+// 扩展 Express 的 Request 接口
+declare global {	// [!code ++]
+    namespace Express {	// [!code ++]
+        interface Request {	// [!code ++]
+            user: { [key: string]: any }; // 定义 locals 属性的类型	// [!code ++]
+        }	// [!code ++]
+    }	// [!code ++]
+}	// [!code ++]
+
+// 设置过期时间，为时间戳
+const expTime = Math.floor(Date.now() / 1000) + (60 * 60)
+
+/**
+ * 创建 token
+ * @param data 需要 sign 的数据
+ */
+export const createToken = (data: Object): Promise<string | undefined | Error | null> => {
+    return new Promise((resolve, reject) => {
+        sign({
+                exp: expTime,
+                data,
+            },
+            'SECRETKEYKEYKEYKEY',
+            {},
+            async (error, encoded) => {
+                if (error) reject(error)
+                resolve(encoded)
+            })
+    })
+}
+
+
+/**
+ * 解析 token
+ * @param token
+ */
+const verifyToken = (token: string) => {
+    return new Promise((resolve, reject) => {
+        verify(token, 'SECRETKEYKEYKEYKEY', async (error, decoded) => {
+            if (error) reject(error)
+            // const data = decoded as JwtData
+            resolve(decoded)
+        })
+    })
+}
+
+
+/**
+ * 校验 token 中间件
+ */
+export const checkToken = async (req: Request, res: Response, next: NextFunction) => {
+    
+    const token = req.header('Authorization')
+    
+    // 校验是否有 Authorization，以及是否为 'Bearer '
+    if (!token || token.slice(0, 7) !== 'Bearer ') {
+        res.status(401).jsonp({
+            err: 4000,
+            message: '请登录！'
+        })
+    } else {
+        try {
+            // 将 Bearer 删除，传入解析 token 函数
+            const user = await verifyToken(token.slice(7)) as JwtData
+            req.user = user.data
+            next()
+        } catch (e) {
+            res.status(401).jsonp({
+                err: 4001,
+                message: '授权失败！'
+            })
+        }
+    }
+}
+```
+
+:::
