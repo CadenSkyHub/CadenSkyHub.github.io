@@ -79,3 +79,103 @@ nginx
 >
 > 外网只能访问到开放的端口，上方的 80和443
 
+
+
+
+
+## phpmyadmin
+
+``` bash
+docker pull phpmyadmin:latest
+
+docker run --name phpmyadmin \
+-d \
+-e PMA_ARBITRARY=1 \
+-p 3307:80 \
+--restart=always \
+phpmyadmin:latest
+```
+
+
+
+## portainer
+
+``` bash
+docker pull portainer/portainer-ce
+
+docker run -d \
+-p 9000:9000 \
+-p 9443:9443 \	# ssl
+--name portainer \
+--restart=always \
+-v /var/run/docker.sock:/var/run/docker.sock \	# docker.sock 地址，默认就在这里
+-v /docker/portainer:/data \
+portainer/portainer-ce:latest
+```
+
+
+
+## alist
+
+``` bash
+docker pull xhofe/alist
+
+docker run -d --name="alist" \
+--restart=unless-stopped \
+-v /mnt/sata1-5/docker/alist:/opt/alist/data \
+-p 5244:5244 \
+xhofe/alist:latest
+
+
+# 手动设置一个密码,`NEW_PASSWORD`是指你需要设置的密码
+docker exec -it alist ./alist admin set NEW_PASSWORD
+```
+
+
+
+## mysql
+
+``` bash
+docker pull mysql:latest
+
+docker run --name mysql \
+-v /mnt/sata1-5/docker/mysql:/var/lib/mysql \
+-p 3306:3306 \
+-e MYSQL_ROOT_PASSWORD=Guoximing123 \
+--restart=always \
+-d mysql:latest
+```
+
+
+
+## gogs
+
+``` bash
+docker pull gogs/gogs
+
+docker run -it --name=gogss \
+-p 3022:3022 \
+-p 3000:3000 \
+-v /mnt/sata1-5/docker/gogs:/data \
+--restart=always \
+gogs/gogs
+```
+
+
+
+> [!warning] 注意
+>
+> - 如果 `ssh` 无法推送，则打开 `gogs/data/gogs/conf/app.ini`,将 `START_SSH_SERVER = fale` 改为 `true` 试试
+>
+>     ![](./assets/image-20231231003500409.png)
+>
+> - 安装时，`ssh` 端口要和`docker`创建外部映射的端口一致，不然复制 `ssh` 地址会发生错误
+>
+>     ![image-20231231003247560](./assets/image-20231231003247560.png)
+
+ 
+
+
+
+
+
