@@ -26,11 +26,5 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
             { text: 'Dotenv', link: '/front/node/3_utility/2_dotenv' },
             { text: 'Zod', link: '/front/node/3_utility/3_zod' },
         ]
-    },
-    {
-        text: 'new',
-        items: [
-            { text: '暂时预览', link: '/front/node/node' }
-        ]
     }
 ]
