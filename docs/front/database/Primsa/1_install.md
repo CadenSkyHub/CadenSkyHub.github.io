@@ -165,7 +165,7 @@ npx prisma migrate dev --name init
 npm install @prisma/client
 ```
 
-> [!tag] 什么是 Prisma Client
+> [!tip] 什么是 Prisma Client
 >
 > `Prisma Client` 是一个自动生成的类型安全查询构造器。
 
