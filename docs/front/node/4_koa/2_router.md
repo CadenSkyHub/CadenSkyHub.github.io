@@ -9,8 +9,8 @@
 > 相关文档：[koa-router](https://www.npmjs.com/package/koa-router)
 >
 > ``` bash
-> npm install koa-router
-> npm install @types/koa-router -D
+> npm install @koa/router
+> npm install @types/koa__router -D
 > ```
 
 

@@ -5,8 +5,8 @@
 - 路由
 
     ``` bash
-    npm install koa-router
-    npm install @types/koa-router -D
+    npm install @koa/router
+    npm install @types/koa__router -D
     ```
 
 - body
