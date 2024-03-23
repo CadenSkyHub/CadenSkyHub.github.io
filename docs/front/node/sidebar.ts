@@ -20,15 +20,7 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
         ]
     },
     {
-        text: 'Koa',
-        items: [
-            { text: '开始', link: '/front/node/4_koa/1_begin' },
-            { text: '路由', link: '/front/node/4_koa/2_router' },
-            { text: '请求', link: '/front/node/4_koa/3_request' },
-            { text: '响应', link: '/front/node/4_koa/4_response' },
-            { text: '错误', link: '/front/node/4_koa/5_errors' },
-            { text: '文件', link: '/front/node/4_koa/6_file' }
-        ]
+        text: 'Fastify'
     },
     {
         text: '实用工具',
