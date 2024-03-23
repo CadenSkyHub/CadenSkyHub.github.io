@@ -6,7 +6,7 @@
 >
 > `koa` 没有内封 `router`，需要安装插件 `koa-router`
 >
-> 相关文档：[koa-router](https://www.npmjs.com/package/koa-router)
+> 相关文档：[@koa/router](https://www.npmjs.com/package/@koa/router)
 >
 > ``` bash
 > npm install @koa/router
