@@ -38,9 +38,9 @@ router.get('/:id/:name', async (ctx: Koa.Context) => {
 > 如果获取不到为：`undefined`
 
 ``` typescript
-ctx.params			// {"id": "ab","name": "cd"} 
-ctx.params['id']	// ab
-ctx.params.id		// ab
+ctx.params			// {"id": "1","name": "张三"} 
+ctx.params['id']	// 1
+ctx.params.id		// 1
 ```
 
 
