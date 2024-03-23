@@ -15,7 +15,7 @@ import { log } from 'console'
 const app = new Koa()
 const router = new Router()
 
-app.use(async (ctx: Koa.Context, next: Koa.Next) => {
+app.use(async (ctx: Koa.ExtendableContext, next: Koa.Next) => {
     try {
         await next()
         if (ctx.response.status === 404) {
@@ -39,14 +39,14 @@ app
 
 
 
-router.get('/', async (ctx: Koa.Context) => {
+router.get('/', async (ctx: Koa.ExtendableContext) => {
     ctx.status = 200
     ctx.body = {
         '1': '1'
     }
 })
 
-router.get('/a', async (ctx: Koa.Context) => {
+router.get('/a', async (ctx: Koa.ExtendableContext) => {
     ctx.throw(500, 'error')
 })
 

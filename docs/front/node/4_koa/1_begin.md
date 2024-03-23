@@ -35,7 +35,7 @@ import Koa from 'koa'
 
 const app = new Koa()
 
-app.use(async (context:Koa.Context) => {
+app.use(async (context:Koa.ExtendableContext) => {
     context.body = 'Hi'
 })
 
