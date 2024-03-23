@@ -18,7 +18,7 @@ npm install @prisma/client
 
 `tsconfig.json`
 
-``` jsoon
+``` json
 {
   "compilerOptions": {
     "sourceMap": true,
@@ -59,7 +59,7 @@ npx prisma init
 
 在 `.env` 文件中配置 `DATABASE_URL` 的连接地址
 
-``` env
+```
 DATABASE_URL="mysql://dbUser:dbPassword@Host:Port/dbName"
 ```
 
@@ -77,7 +77,7 @@ DATABASE_URL="mysql://dbUser:dbPassword@Host:Port/dbName"
 >
 > `.env`
 >
-> ``` env
+> ```
 > DATABASE_URL="xxx"
 > SHADOW_DATABASE_URL="xxx"
 > ```

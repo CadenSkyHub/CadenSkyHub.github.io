@@ -20,7 +20,7 @@ ctx.response.status = 20
 >
 > 不可设置中文，否则报错
 
-``` type
+``` typescript
 ctx.response.message = 'Yes it is OK'
 ```
 
