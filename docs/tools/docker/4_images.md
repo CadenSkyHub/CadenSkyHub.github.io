@@ -177,5 +177,59 @@ gogs/gogs
 
 
 
+## Portainer-ce
 
+中文汉化版：[6053537/portainer-ce | Docker Hub](https://hub.docker.com/r/6053537/portainer-ce)
+
+
+
+``` bash
+docker pull 6053537/portainer-ce
+
+docker run -d \
+--restart=always \
+--name="portainer" \
+-p 9000:9000 \
+-v /var/run/docker.sock:/var/run/docker.sock \
+6053537/portainer-ce
+```
+
+
+
+## Postgresql
+
+### postgresql
+
+镜像：[Postgres | Docker Hub](https://hub.docker.com/_/postgres)
+
+``` bash
+docker pull postgres
+
+docker run \
+--name postgres \
+-v /mnt/sata1-5/docker/postgres:/var/lib/postgresql/data \
+-p 5432:5432 \
+-e POSTGRES_USER=root \				# 默认为 postgres
+-e POSTGRES_PASSWORD=123456 \
+-d \
+postgres
+```
+
+
+
+### pgadmin
+
+镜像：[elestio/pgadmin | Docker Hub](https://hub.docker.com/r/elestio/pgadmin)
+
+``` bash
+docker pull elestio/pgadmin
+
+docker run --name pgadmin \
+-e PGADMIN_DEFAULT_EMAIL=pgadmin@gmail.com \
+-e PGADMIN_DEFAULT_PASSWORD=123456 \
+-e PGADMIN_LISTEN_PORT=8080 \
+-p 5433:8080 \
+-d \
+elestio/pgadmin
+```
 
