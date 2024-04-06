@@ -130,7 +130,7 @@ git rm readme.md --cached
 
 
 
-```txt
+```
 # 为注释
 
 *.txt		忽略所有 .txt 结尾的文件
