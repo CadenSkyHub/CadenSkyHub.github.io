@@ -276,7 +276,6 @@ wsl --import <Distribution Name> <InstallLocation> <FileName>
 [wsl2]
 memory=2GB	# 内存
 swap=4GB	# 交换区
-networkingMode=mirrored 	# 镜像网络，启用此功能会将 WSL 更改为全新的网络体系结构，以添加新的网络功能并提高兼容性。
 ```
 
 然后`wsl --shutdown` 关闭后，重新打开即可
@@ -285,7 +284,18 @@ networkingMode=mirrored 	# 镜像网络，启用此功能会将 WSL 更改为全
 
 ### 配置网络
 
-文档：[使用 WSL 访问网络应用程序 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/wsl/networking)
+这样配置之后，外部网络可访问 `wsl`
+
+可以通过 `ip addr` 命令来查看当前 `linux` 地址
+
+```
+[wsl2]
+networkingMode=mirrored 	# 镜像网络，启用此功能会将 WSL 更改为全新的网络体系结构，以添加新的网络功能并提高兼容性。
+```
+
+> [!caution] 坑
+>
+> 宿主机需要通过 `127.0.0.1` 来访问
 
 
 
