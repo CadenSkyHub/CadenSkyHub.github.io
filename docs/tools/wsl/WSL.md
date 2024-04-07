@@ -200,13 +200,11 @@ wsl --export Ubuntu E:\Linux\ubuntu.tar
 wsl --unregister <DistributionName>
 ```
 
-::: warning 警告
-
-取消注册子系统后，系统文件并没有删除，需要手动删除
-
-:::
-
 ![image-20240126223928271](./assets/image-20240126223928271.png)
+
+> [!tip] 提示
+>
+> 卸载后，将自动删除原系统。无需手动删除
 
 
 
