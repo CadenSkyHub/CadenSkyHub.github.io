@@ -27,7 +27,7 @@ pm2 restart app --cron-restart="0 0 * * *"
 ```js
 module.exports = {
     apps: [{
-        name: 'app1,
+        name: 'app1',
         script: 'app.js',
         instances: 1,
         cron_restart: '0 0 * * *',
