@@ -85,6 +85,10 @@ eval "$(fnm env --use-on-cd)"
 >
 > **则需要修改一下文件权限为 777 [ Mac手动安装同理 ]**  
 >
+> ```
+> chmod +x /fnm/fnm
+> ```
+>
 > 如果还有问题，试试重启看能不能解决
 >
 > 具体修改方法参考：[权限修改](https://blog.csdn.net/zh_1721342390/article/details/104753997)
@@ -193,6 +197,8 @@ $env:FNM_DIR="E:\Fnm\node"
 
 ``` bash
 export FNM_DIR=目录位置
+
+# 将以上内容添加到 ~/.bashrc 中
 ```
 
 
