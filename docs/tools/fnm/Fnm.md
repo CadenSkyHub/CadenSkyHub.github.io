@@ -196,9 +196,11 @@ $env:FNM_DIR="E:\Fnm\node"
 ### 2. Mac/Linux
 
 ``` bash
-export FNM_DIR=目录位置
+export PATH="/fnm:$PATH"			# 指定 node 位置
+export FNM_DIR="/fnm/node"		 # 配置环境变量
+eval "$(fnm env --use-on-cd)"		# 放到最后啊
 
-# 将以上内容添加到 ~/.bashrc 中
+# 将以上内容添加到 ~/.bashrc 中 
 ```
 
 
