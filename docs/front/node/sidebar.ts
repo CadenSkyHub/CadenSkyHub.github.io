@@ -37,5 +37,14 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
             { text: 'Dotenv', link: '/front/node/3_utility/2_dotenv' },
             { text: 'Zod', link: '/front/node/3_utility/3_zod' },
         ]
+    },
+    {
+        text: 'PM2',
+        items: [
+            { text: '开始', link: '/front/node/5_pm2/1_start' },
+            { text: '状态', link: '/front/node/5_pm2/2_status' },
+            { text: '重启策略', link: '/front/node/5_pm2/3_restart' },
+            { text: '持久应用', link: '/front/node/5_pm2/4_rersistent' },
+        ]
     }
 ]
