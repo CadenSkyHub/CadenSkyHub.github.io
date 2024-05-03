@@ -9,17 +9,17 @@
     - [windows 安装fnm node版本管理工具](https://my.oschina.net/gfcm/blog/5712706)
     - [安装 Fast Node Manager (fnm) 以管理 Nodejs 版本 (molingran.com)](https://www.molingran.com/p/use-fnm/)
 
-| 命令                 | 说明                          |
-| -------------------- | ----------------------------- |
-| `fnm --version`      | 查看版本                      |
-| `fnm ls-remote`      | 查看可安装的远程版本          |
-| `fnm install 版本`   | 安装                          |
-| `fnm install --lts`  | 安装最新的`LTS`版本           |
-| `fnm uninstall 版本` | 卸载                          |
-| `fnm current`        | 显示当前使用的版本            |
+| 命令                 | 说明                    |
+| -------------------- |-----------------------|
+| `fnm --version`      | 查看版本                  |
+| `fnm ls-remote`      | 查看可安装的远程版本            |
+| `fnm install 版本`   | 安装                    |
+| `fnm install --lts`  | 安装最新的`LTS`版本          |
+| `fnm uninstall 版本` | 卸载                    |
+| `fnm current`        | 显示当前使用的版本             |
 | `fnm ls`             | 列出已安装的版本              |
 | `fnm use 版本`       | 切换当前`shell`中的`node`版本 |
-| `fnm default 版本`   | 设置默认版本，全局            |
+| `fnm default 版本`   | 设置默认版本，全局             |
 
 ## 安装
 
