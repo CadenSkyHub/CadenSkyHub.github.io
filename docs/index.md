@@ -39,11 +39,11 @@ features:
 
 
 <script setup>
-  import { onMounted } from 'vue'
+  import { onMounted } from 'vue';
   onMounted(()=>{
-    const tagLine = document.querySelector('.tagline')
+    const tagLine = document.querySelector('.tagline');
     setInterval(()=>{
-        const date = new Date()
+        const date = new Date();
         tagLine.innerText = date.toLocaleString().replaceAll('/', '-')
     },1000)
   })
