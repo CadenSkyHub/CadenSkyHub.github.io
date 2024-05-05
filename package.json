@@ -14,9 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vuepic/vue-datepicker": "^8.5.1",
     "vitepress": "^1.0.0-rc.40"
-  },
-  "dependencies": {
-    "@vuepic/vue-datepicker": "^8.5.1"
   }
 }
