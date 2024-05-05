@@ -12,5 +12,6 @@ export const nav: DefaultTheme.NavItem[] = [
             {text: 'Database', link: '/front/database/Mongodb/1_install'},
         ]
     },
-    {text: '工具', link: '/tools/fnm/Fnm'}
+    {text: '工具', link: '/tools/fnm/Fnm'},
+    {text:'其他工具', link:'/other-tools/index'}
 ]
