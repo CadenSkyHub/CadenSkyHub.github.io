@@ -3,7 +3,7 @@ layout: doc
 ---
 
 <script setup>
-import One from './vue/one.vue';
+import One from './vue/One.vue';
 </script>
 
 
