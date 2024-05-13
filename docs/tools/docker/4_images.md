@@ -113,22 +113,6 @@ docker exec -it alist ./alist admin set NEW_PASSWORD
 ```
 
 
-
-## mysql
-
-``` bash
-docker pull mysql:latest
-
-docker run --name mysql \
-        -v /mnt/sata1-5/docker/mysql:/var/lib/mysql \
-        -p 3306:3306 \
-        -e MYSQL_ROOT_PASSWORD=Guoximing123 \
-        --restart=always \
--d mysql:latest
-```
-
-
-
 ## gogs
 
 ``` bash
