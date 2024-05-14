@@ -154,3 +154,30 @@ clearTimeout(timerId)
 </script>
 ```
 
+
+
+## 自制定时函数
+
+> [!caution] 注意！
+>
+> `setTimeout()` 以及 `setInterval()` 为异步，在 `for` 循环中无法使用，以及在 `node` 中有时会出现莫名问题。所以。自己写一个定时函数，来解决这些问题。
+
+该函数可为异步或同步
+
+```javascript
+const sleep = async (time) => {
+    const start = new Date().getTime()
+    while ((new Date().getTime()) - start < time) {}
+}
+```
+
+
+
+**使用**
+
+```javascript
+for (let i = 0; i < 20; i++) {
+    await sleep(2000)
+    console.log(i)
+}
+```
