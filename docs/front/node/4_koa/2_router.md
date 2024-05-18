@@ -19,7 +19,7 @@
 
 ``` typescript {10-14}
 import Koa from 'koa'
-import Router from 'koa-router'	// [!code ++]
+import Router from '@koa/router'	// [!code ++]
 
 const app = new Koa()
 const router = new Router()	// [!code ++]
@@ -60,7 +60,7 @@ app.listen(3000, '0.0.0.0', () => {
 
 
 ``` typescript [router.ts]
-import Router from "koa-router";
+import Router from "@koa/router";
 import publicRouter from "./publicRouter";
 import adminRouter from './adminRouter'
 
@@ -76,7 +76,7 @@ export default routers
 
 
 ``` typescript [publicRouter.ts]
-import Router from "koa-router";
+import Router from "@koa/router";
 import Koa from 'koa'
 
 const publicRouter = new Router()
