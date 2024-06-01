@@ -25,7 +25,7 @@ ctx.querystring	// a=b&c=d
 ## 路径参数
 
 ``` typescript
-router.get('/:id/:name', async (ctx: Koa.ExtendableContext) => {
+router.get('/:id/:name', async (ctx: Koa.Context) => {
     console.log(ctx.params)
     console.log(ctx.params['id'])
 })
@@ -73,7 +73,7 @@ app
    .use(router.routes())
 
 
-router.post('/', async (ctx: Koa.ExtendableContext) => {	// post | put | delete | patch
+router.post('/', async (ctx: Koa.Context) => {	// post | put | delete | patch
     console.log(ctx.request.body)
 })		
 

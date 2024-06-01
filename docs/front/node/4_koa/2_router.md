@@ -27,7 +27,7 @@ const router = new Router()	// [!code ++]
 // 注意这里使用的是 router.routers()
 app.use(router.routes())	// [!code ++]
 
-router.get('/', async (ctx: Koa.ExtendableContext) => {
+router.get('/', async (ctx: Koa.Context) => {
     ctx.body = {
         'path': ctx.request.path
     }
@@ -82,8 +82,8 @@ import Koa from 'koa'
 const publicRouter = new Router()
 
 publicRouter
-    .get('/word-day', async function (ctx:Koa.ExtendableContext){})
-    .get('/word-day/:id', async function (ctx:Koa.ExtendableContext){})
+    .get('/word-day', async function (ctx:Koa.Context){})
+    .get('/word-day/:id', async function (ctx:Koa.Context){})
 
 export default publicRouter
 ```
@@ -97,9 +97,9 @@ import Koa from "koa";
 const adminRouter = new Router().prefix('/admin') 	 // 或 new Router({prefix: '/public'})
 
 adminRouter
-    .post('/word-day', async function (ctx:Koa.ExtendableContext){})
-    .put('/word-day', async function (ctx:Koa.ExtendableContext){})
-    .delete('/word-day', async function (ctx:Koa.ExtendableContext){})
+    .post('/word-day', async function (ctx:Koa.Context){})
+    .put('/word-day', async function (ctx:Koa.Context){})
+    .delete('/word-day', async function (ctx:Koa.Context){})
 
 export default adminRouter
 ```

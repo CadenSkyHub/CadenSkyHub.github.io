@@ -8,14 +8,14 @@ import Koa from "koa";
 const app = new Koa()
 
 // 第一个自定义中间件
-const one = async (ctx: Koa.ExtendableContext, next: Koa.Next) => {
+const one = async (ctx: Koa.Context, next: Koa.Next) => {
     console.log('one-1')
     await next()
     console.log('one-2')
 }
 
 // 第二个自定义中间件
-const two = async (ctx: Koa.ExtendableContext, next: Koa.Next) => {
+const two = async (ctx: Koa.Context, next: Koa.Next) => {
     console.log('two-1')
     await next()
     console.log('two-2')
@@ -24,7 +24,7 @@ const two = async (ctx: Koa.ExtendableContext, next: Koa.Next) => {
 app
     .use(one)
     .use(two)
-    .use(async (ctx: Koa.ExtendableContext) => {
+    .use(async (ctx: Koa.Context) => {
     	ctx.response.body = '来试试自定义中间件'
 	})
 
