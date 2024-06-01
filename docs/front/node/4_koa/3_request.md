@@ -53,9 +53,16 @@ ctx.params.id		// 1
 >
 > 相关文档：[koa-bodyparser ](https://www.npmjs.com/package/koa-bodyparser)
 >
+> 或者 `koa-body`
+>
+> 相关文档：[koa-body](https://www.npmjs.com/package/koa-body)
+>
 > ``` bash
 > npm install koa-bodyparser
 > npm install @types/koa-bodyparser -D
+> 
+> // koa-body  推荐
+> npm i koa-body
 > ```
 
 ### 使用
