@@ -49,13 +49,11 @@ ctx.params.id		// 1
 
 > [!important] 重要
 >
-> 需要安装插件 `koa-bodyparser`
+> - 需要安装插件 `koa-bodyparser`
+>   - 相关文档：[koa-bodyparser ](https://www.npmjs.com/package/koa-bodyparser)
 >
-> 相关文档：[koa-bodyparser ](https://www.npmjs.com/package/koa-bodyparser)
->
-> 或者 `koa-body`
->
-> 相关文档：[koa-body](https://www.npmjs.com/package/koa-body)
+> - 或者 `koa-body` 同时还支持文件上传，详见：[文件处理](./6_file)
+>   - 相关文档：[koa-body](https://www.npmjs.com/package/koa-body)
 >
 > ``` bash
 > npm install koa-bodyparser

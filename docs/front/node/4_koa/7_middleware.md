@@ -72,10 +72,33 @@ npm install koa-bodyparser
 npm install @types/koa-bodyparser -D
 ```
 
+### koa-body
+
+- 用法：[用法](./6_file#设置静态目录)
+- 相关文档：[koa-body - npm (npmjs.com)](https://www.npmjs.com/package/koa-body)
+- 扩展文档：[扩展](https://github.com/node-formidable/formidable#filebegin)
+
+```
+npm install koa-static
+npm i --save-dev @types/koa-static
+```
+
 
 
 ### cors
 
+- 相关文档：[@koa/cors - npm (npmjs.com)](https://www.npmjs.com/package/@koa/cors)
 
+```
+npm i @koa/cors
+npm i @types/koa__cors
+```
 
-### file
+```typescript
+import koa from 'koa';
+import cors from "@koa/cors";
+
+const app = new koa()
+
+app.use(cors())
+```

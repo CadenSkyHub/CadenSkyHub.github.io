@@ -27,7 +27,8 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
             { text: '请求', link: '/front/node/4_koa/3_request' },
             { text: '响应', link: '/front/node/4_koa/4_response' },
             { text: '错误', link: '/front/node/4_koa/5_errors' },
-            { text: '文件', link: '/front/node/4_koa/6_file' }
+            { text: '文件', link: '/front/node/4_koa/6_file' },
+            { text: '中间件', link: '/front/node/4_koa/7_middleware' },
         ]
     },
     {
