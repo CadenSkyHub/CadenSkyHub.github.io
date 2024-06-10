@@ -31,9 +31,10 @@ export const toolSideBar: DefaultTheme.SidebarItem[] = [
         collapsed: true
     },
     {
-        text: "PoserShell",
+        text: "零碎",
         items: [
-            { text: '一些问题', link: "/tools/PowerShell7/0_powershell7" }
+            { text: 'PowerShell', link: "/tools/PowerShell7/0_PowerShell7" },
+            { text: 'ShellClash', link: "/tools/shellClash/0_ShellClash" },
         ],
         collapsed: true
     },
