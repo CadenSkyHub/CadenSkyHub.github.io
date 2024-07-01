@@ -4,6 +4,12 @@
 
 学习视频：[哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1HP4118797/?p=6&spm_id_from=pageDriver&vd_source=a971f27cdc6a5c5e8a16041ae47b0aec)
 
+> [!note] 提示
+> 也可以使用 `bash <(curl -sSL https://linuxmirrors.cn/docker.sh)` 一键安装脚本
+> ``` bash
+> bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
+> ```
+
 `Centos7` 下 `docker` 的安装、卸载、配置镜像等
 
 ## Step1. 卸载
