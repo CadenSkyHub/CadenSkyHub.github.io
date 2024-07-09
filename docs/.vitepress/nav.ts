@@ -10,6 +10,7 @@ export const nav: DefaultTheme.NavItem[] = [
             {text: 'TypeScript', link: '/front/typescript/1_begin'},
             {text: 'Node', link: '/front/node/1_base/1_npm'},
             {text: 'Database', link: '/front/database/Mongodb/1_install'},
+            {text: 'Directus', link: '/front/directus/0_start'},
         ]
     },
     {text: '工具', link: '/tools/fnm/Fnm'},

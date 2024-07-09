@@ -18,11 +18,5 @@ export const databaseSideBar:DefaultTheme.SidebarItem[] = [
             {text:'聚合管道', link:'/front/database/Mongodb/12_aggregation'},
             {text:'聚合函数', link:'/front/database/Mongodb/13_aggregate_func'},
         ]
-    },
-    {
-        text:'Prisma',
-        items:[
-            {text:'Prisma',link:'/front/database/Primsa/1_install'}
-        ]
     }
 ]
