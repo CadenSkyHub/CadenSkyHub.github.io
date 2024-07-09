@@ -237,3 +237,122 @@ docker run --name warp \
 	vvbbnn00/warp-clash-api
 ```
 
+
+
+## 内网穿透隧道
+
+文档：[文档 | frp (gofrp.org)](https://gofrp.org/zh-cn/docs/)
+
+`github`：[fatedier/frp](https://github.com/fatedier/frp)
+
+`frpc docker`：[snowdreamtech/frpc - Docker Image | Docker Hub](https://hub.docker.com/r/snowdreamtech/frpc)
+
+`frps docker`：[hub.docker.com/r/snowdreamtech/frps](https://hub.docker.com/r/snowdreamtech/frps)
+
+
+
+### frpc 客户端
+
+::: code-group
+
+
+
+```toml [toml 配置文件] {36-42}
+# `frpc.toml` 配置文件
+
+serverAddr = "x.x.x.x"	# server 地址
+serverPort = 7000	# server 监听端口，与 frps 对应
+
+webServer.addr = "0.0.0.0"	# web server 监听地址
+webServer.port = 7500	# web server 端口
+webServer.user = "admin"
+webServer.password = "admin"
+
+# token
+# 只需要在 frp 的客户端 frpc 和服务端 frps 配置文件中配置相同的 token 即可。
+auth.token = "token123456abcdefg"
+
+# 配置 http 简单隧道，可以通过 服务器 ip:8080 来进行访问
+[[proxies]]	 	
+name = "web"
+type = "http"
+localPort = 80
+
+# 配置 http 自定义域名隧道 01，可以通过 服务器 domain:8080 来进行访问
+# 如果使用反代，反代地址为 *服务器ip:8080* 则可以使用 domain 进行访问
+[[proxies]]
+name = "web2"
+type = "http"
+localPort = 81
+customDomains = ["www.domain.com"]
+
+# 如果使用反代，同样反代地址为 *服务器ip:8080* 则可以使用 abc.domain1 进行访问 // [!code warning]
+[[proxies]]
+name = "web2"
+type = "http"
+localPort = 82
+customDomains = ["abc.domain1.com"]
+
+# 配置局域网内其他主机
+[[proxies]]
+name = "web3"
+type = "http"
+localIP = "10.10.10.102"
+localPort = 83
+customDomains = ["www.domain2.com"]
+```
+
+
+
+```shell [docker 运行]
+docker run -d --name frpc \
+	--restart=always \
+    --network host \
+    -v $PWD/frpc.toml:/etc/frp/frpc.toml \
+    snowdreamtech/frpc
+```
+
+:::
+
+
+
+> [!warning] 提示
+>
+> **多个服务自定义域名**
+>
+> - 后端通过解析域名来访问。
+> - 如果使用 **反代** ，可在每个域名反代 `8080` 端口，通过 `frps` 自动进行分类。
+
+
+
+### frps 服务端
+
+::: code-group
+
+```toml [toml 配置文件]
+# `frpc.toml` 配置文件
+
+bindPort = 7000		# 监听端口
+vhostHTTPPort = 8080	# 出口，通过哪个端口提供访问
+
+webServer.addr = "0.0.0.0"	# web server 监听地址
+webServer.port = 7500	# web server 端口
+webServer.user = "admin"
+webServer.password = "admin"
+
+# token
+# 只需要在 frp 的客户端 frpc 和服务端 frps 配置文件中配置相同的 token 即可。
+auth.token = "token123456abcdefg"
+```
+
+
+
+```shell [docker 运行]
+docker run --name frps -d \
+    --restart=always \
+    --network host \
+    -v $PWD/frps.toml:/etc/frp/frps.toml \
+    snowdreamtech/frps
+```
+
+:::
