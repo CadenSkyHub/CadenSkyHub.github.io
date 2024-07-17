@@ -14,5 +14,5 @@ export const nav: DefaultTheme.NavItem[] = [
         ]
     },
     {text: '工具', link: '/tools/fnm/Fnm'},
-    {text:'其他工具', link:'/other-tools/index'}
+    {text: '其他工具', link: '/other-tools/index'}
 ]
