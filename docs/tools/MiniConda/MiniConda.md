@@ -2,6 +2,7 @@
 
 | 命令                                          | 说明                 |
 | --------------------------------------------- | -------------------- |
+| `conda init` | 安装完 conda 后，先执行该命令才可使用             |
 | `conda create --n <环境名称> python=环境版本` | 创建环境             |
 | `conda activate <环境名称>`                   | 激活环境             |
 | `conda deactivate`                            | 离开环境             |
@@ -112,29 +113,31 @@ bash 文件名
 
 ### 更换 conda 源
 
-[阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/?serviceType=&tag=&keyword=conda)
+[清华源](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/#:~:text=Miniconda%20%E5%AE%89%E8%A3%85%E5%8C%85%E5%8F%AF%E4%BB%A5%E5%88%B0,https%3A%2F%2Fmirrors.tuna.tsinghua.edu.cn%2Fanaconda%2Fminiconda%2F%20%E4%B8%8B%E8%BD%BD%E3%80%82)
 
-- `Linux` 可通过修改用户目录下的 `.condarc` 文件
+- `Linux` 可通过修改用户目录下的 `.condarc` 文件。地址为：`~/.condarc`
 
 - `Windows` 无法直接创建名为 `.condarc` 文件，
 
-    可先执行 `conda config --set show_channel_urls yes` 生成该文件再修改
+    可先执行 `conda config --set show_channel_urls yes` 生成该文件再修改。地址为：`C:\Users\<user>\.condarc`
 
 ``` yaml
 channels:
   - defaults
 show_channel_urls: true
 default_channels:
-  - http://mirrors.aliyun.com/anaconda/pkgs/main
-  - http://mirrors.aliyun.com/anaconda/pkgs/r
-  - http://mirrors.aliyun.com/anaconda/pkgs/msys2
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
 custom_channels:
-  conda-forge: http://mirrors.aliyun.com/anaconda/cloud
-  msys2: http://mirrors.aliyun.com/anaconda/cloud
-  bioconda: http://mirrors.aliyun.com/anaconda/cloud
-  menpo: http://mirrors.aliyun.com/anaconda/cloud
-  pytorch: http://mirrors.aliyun.com/anaconda/cloud
-  simpleitk: http://mirrors.aliyun.com/anaconda/cloud
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 ```
 
 
@@ -160,5 +163,17 @@ pip 源尽量在环境内更换
     ``` bash
     pip install -i https://mirrors.aliyun.com/pypi/simple/ flssk
     ```
+  
+## 更换 envs 路径
 
-    
+默认路径为 `C:\Users\<user>\.conda\envs`
+
+在 `.condarc` 中添加
+
+``` yaml
+envs_dirs:
+  - E:\ENV\MiniConda\envs
+```
+
+
+
