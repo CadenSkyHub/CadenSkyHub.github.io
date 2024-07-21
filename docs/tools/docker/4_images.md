@@ -356,3 +356,54 @@ docker run --name frps -d \
 ```
 
 :::
+
+
+
+## jupyter
+
+### 拉取镜像
+
+```bash
+docker pull jupyter/minimal-notebook
+```
+
+> [!CAUTION] 注意：需要设置一下当前目录的权限
+>
+> ```bash
+> sudo chmod -R 777 $PWD
+> ```
+
+### 启动容器
+
+```bash
+docker run -d --name jupyter \
+	-p 8000:8888 \
+	--user root \
+	-v $PWD:/home/jovyan \
+	jupyter/minimal-notebook
+```
+
+### 设置密码
+
+**进入 `jupyter` 容器，然后执行**
+
+```
+jupyter server list
+```
+
+**将会出现类似以下：**
+
+![image-20240722002702659](./assets/image-20240722002702659.png)
+
+**然后复制`token`粘贴在以下令牌部分，然后设置新密码**
+
+![image-20240722002747420](./assets/image-20240722002747420.png)
+
+
+
+## 设置中文
+
+```
+pip install jupyterlab-language-pack-zh-CN
+```
+
