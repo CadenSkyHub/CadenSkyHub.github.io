@@ -154,11 +154,67 @@ git pull
 
 
 
-
-
 ### 查看远程分支关联
 
 ```shell
 git remote -v
 ```
+
+
+
+
+
+## 多个 github 账户
+
+[参考](https://engineeringfordatascience.com/posts/how_to_manage_multiple_git_accounts_on_the_same_machine/)
+
+```
+Host caden.github.com		// Host 需要区分一下
+HostName github.com			// 不用动
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/caden	// 该账户的key位置要正确
+
+Host emma.github.com		// Host 需要区分一下
+HostName github.com			// 不用动
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/emma	// 该账户的key位置要正确
+```
+
+
+
+### 注意点一
+
+ `caden` 账户的 `github`
+
+![image-20240724145854148](./assets/image-20240724145854148.png)
+
+`emma` 账户的 `github`
+
+![image-20240724150100454](./assets/image-20240724150100454.png)
+
+> [!CAUTION] 注意
+>
+> 不同地址的 `git remote 的地址` 要和 `config Host` 相对应
+
+
+
+### 注意点二
+
+尽量在不同的项目来配置不同的 `user.name` 和 `user.email`
+
+::: details caden
+
+![image-20240724150444588](./assets/image-20240724150444588.png)
+
+:::
+
+
+
+::: details emma
+
+![image-20240724150524510](./assets/image-20240724150524510.png)
+
+:::
+
+
 
