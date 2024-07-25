@@ -216,5 +216,25 @@ IdentityFile ~/.ssh/emma	// 该账户的key位置要正确
 
 :::
 
+## 多平台
+```
+Host caden.github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/caden
 
+
+Host emma.github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/emma
+
+
+Host 10.10.10.10
+HostName 10.10.10.10
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/home
+```
+> [!CAUTION] 注意！
+> 这里建议 HOST 和 HostName 写一样的。 [参考](https://blog.csdn.net/qq_41836702/article/details/131192581)
 
