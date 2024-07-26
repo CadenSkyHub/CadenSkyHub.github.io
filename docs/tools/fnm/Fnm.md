@@ -203,9 +203,12 @@ eval "$(fnm env --use-on-cd)"		# 放到最后啊
 # 将以上内容添加到 ~/.bashrc 中 
 ```
 
+## 配置 fnm 镜像
+
+阿里云镜像：[node_release](https://developer.aliyun.com/mirror/nodejs-release?spm=a2c6h.13651102.0.0.4da71b11WFkR2Q) 内有教程
 
 
-## 配置镜像
+## 配置 npm 镜像
 
 在使用 `npm` 时，你可以通过配置镜像源来提高包的下载速度，尤其是在国内网络环境下。
 
