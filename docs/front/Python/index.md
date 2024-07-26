@@ -1,6 +1,5 @@
 ---
 layout: doc
-sidebar: false
 ---
 # 官方文档
 

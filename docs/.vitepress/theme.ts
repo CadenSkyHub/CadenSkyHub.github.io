@@ -7,6 +7,7 @@ import {nodeSideBar} from "../front/node/sidebar";
 import {toolSideBar} from "../tools/sidebar";
 import {databaseSideBar} from "../front/database/sidebar";
 import {directusSidebar} from "../front/directus/sidebar";
+import pythonSideBar from "../front/Python/sideBar";
 
 export const themeConfig: DefaultTheme.Config = {
     siteTitle: "< ~/ > MyNote",
@@ -26,7 +27,8 @@ export const themeConfig: DefaultTheme.Config = {
         '/front/typescript/': typescriptSideBar,
         '/front/node/': nodeSideBar,
         '/front/database/': databaseSideBar,
-        'front/directus/': directusSidebar,
+        '/front/directus/': directusSidebar,
+        '/front/Python/': pythonSideBar,
         '/tools': toolSideBar,
     },
 
