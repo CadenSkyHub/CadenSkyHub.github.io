@@ -40,6 +40,7 @@ c.ServerApp.ip = '0.0.0.0'
 c.ServerApp.allow_origin = '*'
 c.ServerApp.notebook_dir = '/mnt/f/jupyter'
 c.ServerApp.open_browser = False
+c.NotebookApp.terminado_settings = {"shell_command":["/bin/bash"]}
 ```
 
 > [!CAUTION] 注意
@@ -90,6 +91,14 @@ c.ServerApp.notebook_dir = '/mnt/f/jupyter'
 c.ServerApp.open_browser = False  # // [!code ++]
 ```
 
+### 切换 lab terminal 为 bash
+
+编辑配置文件，修改：
+
+```python
+# c.NotebookApp.terminado_settings = {} // [!code --]
+c.NotebookApp.terminado_settings = {"shell_command":["/bin/bash"]}  # // [!code ++]
+```
 
 
 ## 设置中文
