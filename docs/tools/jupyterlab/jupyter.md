@@ -93,6 +93,8 @@ c.ServerApp.open_browser = False  # // [!code ++]
 
 ### 切换 lab terminal 为 bash
 
+[参考](https://blog.csdn.net/weixin_39885358/article/details/127869634)
+
 编辑配置文件，修改：
 
 ```python
