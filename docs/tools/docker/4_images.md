@@ -361,17 +361,7 @@ docker run --name frps -d \
 
 ## jupyter
 
-> [!WARNING] 注意！
->
-> 新版本的 `conda` 将 
->
-> `conda activate envname`
->
-> 改为了
->
-> `source activate envname`
->
-> 所以在切换环境时，需要使用 `source`
+更多内容查看：[jupyter lab](/tools/jupyterlab/jupyter#配置)
 
 ### 拉取镜像
 
@@ -411,34 +401,3 @@ jupyter server list
 
 ![image-20240722002747420](./assets/image-20240722002747420.png)
 
-
-
-### 设置中文
-
-```
-pip install jupyterlab-language-pack-zh-CN
-```
-
-### 内核切换
-
-**1. 首先**
-
-需要在 `base` 环境下执行
-
-``` bash
-conda install nb_conda_kernels
-```
-
-**2. 然后**
-
-切换到新环境，执行 `conda install ipykernel`
-
-```bash
-conda create -n myenv python=3.8
-source activate myenv
-conda install ipykernel
-```
-
-**3. 重启 jupyter notebook**
-
-如果为 `docker` 安装，则重启 `jupyter` 容器
