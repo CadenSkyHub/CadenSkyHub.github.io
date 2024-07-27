@@ -8,6 +8,7 @@ export const toolSideBar: DefaultTheme.SidebarItem[] = [
             { text: 'FNM', link: "/tools/fnm/Fnm" },
             { text: 'WSL', link: "/tools/wsl/WSL" },
             { text: 'MiniConda', link: "/tools/MiniConda/MiniConda" },
+            { text: 'JupyterLab', link: "/tools/jupyterlab/jupyter" },
         ],
         collapsed: true
     },
