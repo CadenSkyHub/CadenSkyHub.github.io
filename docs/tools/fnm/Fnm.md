@@ -39,11 +39,8 @@
 
 **自动安装**
 
-``` bash
-curl -fsSL https://fnm.vercel.app/install | bash
-```
-
-如果上面一直没反应，则通过下面的命令进行手动安装。
+[NodeJs](https://nodejs.org/zh-cn/download/package-manager) 提供了更简单的安装方式，
+如果一直没反应，则通过下面的命令进行手动安装。
 
 
 
@@ -99,11 +96,7 @@ eval "$(fnm env --use-on-cd)"
 
 **自动安装**
 
-``` bash
-curl -fsSL https://fnm.vercel.app/install | bash -s -- --install-dir "./.fnm" --skip-shell
-```
-
-如果上面一直没反应，挂代理，强制模式。
+[NodeJs](https://nodejs.org/zh-cn/download/package-manager) 提供了更简单的安装方式， 如果一直没反应，挂代理，强制模式。
 
 **手动安装**
 
