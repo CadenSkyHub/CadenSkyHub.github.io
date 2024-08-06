@@ -169,12 +169,12 @@ git remote -v
 [参考](https://engineeringfordatascience.com/posts/how_to_manage_multiple_git_accounts_on_the_same_machine/)
 
 ```
-Host caden.github.com		// Host 需要区分一下
+Host caden.github.com		// Host 需要区分一下。也可以直接写成 caden
 HostName github.com			// 不用动
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/caden	// 该账户的key位置要正确
 
-Host emma.github.com		// Host 需要区分一下
+Host emma.github.com		// Host 需要区分一下,也可以直接写成 emma
 HostName github.com			// 不用动
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/emma	// 该账户的key位置要正确
@@ -218,13 +218,13 @@ IdentityFile ~/.ssh/emma	// 该账户的key位置要正确
 
 ## 多平台
 ```
-Host caden.github.com
+Host caden
 HostName github.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/caden
 
 
-Host emma.github.com
+Host emma
 HostName github.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/emma
@@ -239,7 +239,7 @@ IdentityFile ~/.ssh/home
 > 这里建议 HOST 和 HostName 写一样的。 [参考](https://blog.csdn.net/qq_41836702/article/details/131192581)
 
 **参数解析**
-1. Host 10.10.10.10：这个参数指定了一个特定的 SSH 主机名称。在这里，它是 IP 地址 10.10.10.10 的简称，可以用来代替 IP 地址进行 SSH 连接。
-2. HostName 10.10.10.10：这个参数指定了 SSH 客户端应该连接到的实际主机的地址。它在 Host 名称被解析成具体 IP 地址或 DNS 名称时起作用。如果两者相同，通常可以省略这个设置。
-3. PreferredAuthentications publickey：这个参数决定了 SSH 客户端在登录过程中尝试使用的首选认证方式。在这里，它是设置为 publickey，这意味着客户端优先尝试使用公钥进行身份验证。这种方法比传统的密码验证更安全。
-4. IdentityFile ~/.ssh/home：这个参数指定了 SSH 客户端应该用于连接的私钥文件路径。在这里，它是 ~/.ssh/home，这意味着客户端会尝试在该目录下找一个名为 "home" 的私钥文件。如果找到该文件，并且可以正确解析公钥，客户端将使用它来进行身份验证。
+1. `Host 10.10.10.10`：这个参数指定了一个特定的 SSH 主机名称。在这里，它是 IP 地址 10.10.10.10 的简称，可以用来代替 IP 地址进行 SSH 连接。
+2. `HostName 10.10.10.10`：这个参数指定了 SSH 客户端应该连接到的实际主机的地址。它在 Host 名称被解析成具体 IP 地址或 DNS 名称时起作用。如果两者相同，通常可以省略这个设置。
+3. `PreferredAuthentications publickey`：这个参数决定了 SSH 客户端在登录过程中尝试使用的首选认证方式。在这里，它是设置为 publickey，这意味着客户端优先尝试使用公钥进行身份验证。这种方法比传统的密码验证更安全。
+4. `IdentityFile ~/.ssh/home`：这个参数指定了 SSH 客户端应该用于连接的私钥文件路径。在这里，它是 ~/.ssh/home，这意味着客户端会尝试在该目录下找一个名为 "home" 的私钥文件。如果找到该文件，并且可以正确解析公钥，客户端将使用它来进行身份验证。
