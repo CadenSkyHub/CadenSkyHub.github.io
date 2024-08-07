@@ -29,6 +29,9 @@ const ResultSchema = z.object({
  * system
  *  - 系统，给 gpt 指定角色，也就是说它是干嘛的
  * 
+ * assistant
+ *  - 助手，就是 gpt 
+ * 
  * user
  *  - 用户内容
  */
