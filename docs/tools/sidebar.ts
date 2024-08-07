@@ -36,6 +36,7 @@ export const toolSideBar: DefaultTheme.SidebarItem[] = [
         items: [
             { text: 'PowerShell', link: "/tools/PowerShell7/0_PowerShell7" },
             { text: 'ShellClash', link: "/tools/ShellClash/0_shellClash" },
+            { text: 'OpenAi', link: "/tools/other/openai" },
         ],
         collapsed: true
     },
