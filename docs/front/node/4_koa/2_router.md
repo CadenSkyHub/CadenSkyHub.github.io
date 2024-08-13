@@ -50,7 +50,7 @@ import routers from './router'
 
 const app = new Koa()
 
-app.use(routers.routes(), routers.allowedMethods())	// [!code warning]
+app.use(routers.routes()).use(routers.allowedMethods()) 	// [!code warning]
 
 app.listen(3000, '0.0.0.0', () => {
     console.log('服务器启动成功')
