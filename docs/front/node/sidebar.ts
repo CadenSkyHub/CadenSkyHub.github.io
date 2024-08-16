@@ -48,5 +48,15 @@ export const nodeSideBar: DefaultTheme.SidebarItem[] = [
             { text: '重启策略', link: '/front/node/5_pm2/3_restart' },
             { text: '持久应用', link: '/front/node/5_pm2/4_rersistent' },
         ]
+    },
+    {
+        text:'Knex',
+        items:[
+            { text: '开始', link: '/front/node/7_knex/1_start' },
+            { text: '迁移', link: '/front/node/7_knex/2_migrate' },
+            { text: '使用', link: '/front/node/7_knex/3_curd' },
+            { text: '事务', link: '/front/node/7_knex/4_transaction' },
+            { text: '示例', link: '/front/node/7_knex/5_eg' },
+        ]
     }
 ]
