@@ -19,6 +19,10 @@
     margin: 0 auto;
 }
 
+.table_p{
+    overflow: auto;
+}
+
 /* 文档内所有表格为 100% 宽度 */
 .vp-doc table{
     display: table;
