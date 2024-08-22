@@ -61,17 +61,6 @@ npm install @types/koa__router -D
 
 
 
-### body-parser
-
-- 用法：[用法](./3_request#请求体参数)
-
-- 相关文档：[koa-bodyparser ](https://www.npmjs.com/package/koa-bodyparser)
-
-``` bash
-npm install koa-bodyparser
-npm install @types/koa-bodyparser -D
-```
-
 ### koa-body
 
 - 用法：[用法](./6_file#设置静态目录)

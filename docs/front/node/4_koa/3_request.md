@@ -49,32 +49,25 @@ ctx.params.id		// 1
 
 > [!important] 重要
 >
-> - 需要安装插件 `koa-bodyparser`
->   - 相关文档：[koa-bodyparser ](https://www.npmjs.com/package/koa-bodyparser)
->
-> - 或者 `koa-body` 同时还支持文件上传，详见：[文件处理](./6_file)
->   - 相关文档：[koa-body](https://www.npmjs.com/package/koa-body)
+> -  `koa-body` 同时还支持文件上传，详见：[文件处理](./6_file)
+> - 相关文档：[koa-body](https://www.npmjs.com/package/koa-body)
 >
 > ``` bash
-> npm install koa-bodyparser
-> npm install @types/koa-bodyparser -D
-> 
-> // koa-body  推荐
 > npm i koa-body
-> ```
+>```
 
 ### 使用
 
 ``` typescript
 import Koa from 'koa'
 import Router from 'koa-router'
-import bodyParser from 'koa-bodyparser'		// [!code ++]
+import koaBody from "koa-body"	// [!code ++]
 
 const app = new Koa()
 const router = new Router()
 
 app
-   .use(bodyParser())		// [!code ++]
+   .use(koaBody())		// [!code ++]
    .use(router.routes())
 
 

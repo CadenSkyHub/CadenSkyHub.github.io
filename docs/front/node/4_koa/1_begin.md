@@ -14,8 +14,14 @@
 - body
 
     ``` bash
-    npm install koa-bodyparser
-    npm install @types/koa-bodyparser -D
+    npm i koa-body
+    ```
+    
+- cors
+
+    ``` bash
+    npm i @koa/cors
+    npm i @types/koa__cors
     ```
 
 
