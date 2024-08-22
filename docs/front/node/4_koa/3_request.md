@@ -164,7 +164,7 @@ ctx.request.body	// { name: '张三', age: '12' } 注意，这里得到的 12 �
 
 ::: code-group
 
-```typescript [获取全部]
+``` typescript [获取全部]
 ctx.headers // 获取全部请求头	// [!code focus]
 
 {
