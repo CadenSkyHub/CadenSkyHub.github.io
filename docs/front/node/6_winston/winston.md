@@ -13,12 +13,18 @@ npm install winston
 >
 > `level` 说明：配置中的作用是设置日志记录器的最低日志级别。只有级别等于或高于这个设置的日志消息才会被记录。`winston` 支持以下默认日志级别（从低到高）：
 >
-> 1. `silly`
-> 2. `debug`
-> 3. `verbose`
-> 4. `info`
-> 5. `warn`
-> 6. `error`
+> ``` javascript
+> const levels = {
+>      error: 0,
+>      warn: 1,
+>      info: 2,
+>      http: 3,
+>      verbose: 4,
+>      debug: 5,
+>    silly: 6
+> };
+> ```
+
 
 
 
