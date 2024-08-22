@@ -6,7 +6,7 @@
 Winston 是一个非常流行的 Node.js 日志库，功能强大且易于配置。以下是一个详细的步骤，教你如何使用 Winston 并配置按天分割日志文件。
 
 ```
-npm install winsto
+npm install winston
 ```
 
 > [!NOTE] Level
