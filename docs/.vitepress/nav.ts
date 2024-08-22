@@ -12,9 +12,15 @@ export const nav: DefaultTheme.NavItem[] = [
                     {text: 'JavaScript', link: '/front/javascript/1_begin/1_var_const_ident'},
                     {text: 'TypeScript', link: '/front/typescript/1_begin'},
                     {text: 'Node', link: '/front/node/1_base/1_npm'},
-                    {text: 'Database', link: '/front/database/Mongodb/1_install'},
                     {text: 'Directus', link: '/front/directus/0_start'},
                 ]
+            },
+            {
+              text:'数据库',
+              items:[
+                  {text: 'Mongodb', link: '/front/database/Mongodb/1_install'},
+                  {text: 'Redis', link: '/front/database/redis/1_begin'},
+              ]
             },
             {
                 text: 'Python',
