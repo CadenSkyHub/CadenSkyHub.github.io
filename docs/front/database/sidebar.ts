@@ -29,6 +29,7 @@ export const databaseSideBar: DefaultTheme.SidebarItem[] = [
             {text: '列表', link: '/front/database/redis/5_list'},
             {text: '集合', link: '/front/database/redis/6_set'},
             {text: '有序集合', link: '/front/database/redis/7_sortedSet'},
+            {text: 'node-redis', link: '/front/database/redis/10_node-redis'},
         ]
     }
 ]
