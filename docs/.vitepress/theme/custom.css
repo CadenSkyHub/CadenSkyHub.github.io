@@ -29,6 +29,10 @@
     min-width: 100%;
 }
 
+.vp-doc table td{
+    text-wrap: nowrap;
+}
+
 
 /* font */
 
