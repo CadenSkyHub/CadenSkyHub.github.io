@@ -8,7 +8,7 @@
 
 在 **根目录** 创建一个 `error.vue` 文件，这样可以自定义页面。
 
-```vue
+``` vue
 <script setup lang="ts">
 import type {NuxtError} from '#app'
 const props = defineProps({

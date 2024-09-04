@@ -20,14 +20,14 @@
 
 ## 安装
 
-```bash
+``` bash
 mkdir nuxt && cd nuxt
 npm init -y
 ```
 
 然后将 `scripts` 复制到 `package.json` 中
 
-```json
+``` json
 {
   "scripts": {
     "dev": "nuxt",

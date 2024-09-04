@@ -2,7 +2,7 @@
 
 先安装 `ioredis`
 
-```bash
+``` bash
 npm i ioredis
 ```
 
@@ -14,7 +14,7 @@ Nitro 提供了一个内置存储层，可以抽象化文件系统、数据库�
 
 使用
 
-```ts
+``` ts
 await useStorage('redis').setItem('user', 'abc')
 ```
 

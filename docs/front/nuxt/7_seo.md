@@ -2,7 +2,7 @@
 
 [SEO and Meta · Get Started with Nuxt](https://nuxt.com/docs/getting-started/seo-meta)
 
-```vue
+``` vue
 <script setup lang="ts">
 
 type User = {

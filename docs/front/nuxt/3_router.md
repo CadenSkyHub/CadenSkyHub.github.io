@@ -10,13 +10,13 @@
 
 ::: code-group
 
-```bash [目录结构]
+``` bash [目录结构]
 | pages/
 	| about.vue
 	| index.vue
 ```
 
-```ts [生成的路由]
+``` ts [生成的路由]
 {
   "routes": [
     {
@@ -47,7 +47,7 @@
 		|- [id].vue
 ```
 
-```ts [生成的路由]
+``` ts [生成的路由]
 {
   "routes": [
     {
@@ -58,7 +58,7 @@
 }
 ```
 
-```vue [获取参数]
+``` vue [获取参数]
 <script setup lang="ts">
 const route = useRoute()
 
@@ -78,13 +78,13 @@ console.log(route.params.id)
 
 ::: code-group
 
-```bash [目录结构]
+``` bash [目录结构]
 | pages/
 	|- [[post]]
 		|- index.vue
 ```
 
-```vue
+``` vue
 <script setup lang="ts">
 
 // 将会获取到可选路由的参数
@@ -100,13 +100,13 @@ const post = useRoute().params.post
 
 ::: code-group
 
-```bash [目录结构]
+``` bash [目录结构]
 | pages/
 	|- [[post]]
 		|- all.vue
 ```
 
-```vue
+``` vue
 <script setup lang="ts">
 
 // 将会获取到可选路由的参数
@@ -126,7 +126,7 @@ const post = useRoute().params.post
 
 `[...any]` 通过 `[...any]` 来定义， `any` 为任意
 
-```bash [目录结构]
+``` bash [目录结构]
 | pages/
 	|- [...404].vue
 ```
@@ -135,7 +135,7 @@ const post = useRoute().params.post
 
 ## 指定路由名称
 
-```vue
+``` vue
 <script setup lang="ts">
 
 import {definePageMeta} from "../.nuxt/imports";
@@ -161,7 +161,7 @@ definePageMeta({
 
 ::: code-group
 
-```ts [携带参数]
+``` ts [携带参数]
 const rrr = () =>{
     navigateTo({path:'/?id=555'})
 }
@@ -172,7 +172,7 @@ const rrr = () => {
 }
 ```
 
-```vue [获取参数]
+``` vue [获取参数]
 <script setup lang="ts">
 const route = useRoute()
 
@@ -191,7 +191,7 @@ console.log(route.query.id)
 
 `<NuxtLink>` 组件用于在页面之间创建链接。它会将`<a>`标签渲染为具有`href`属性设置为页面的路由。封装的是 `vue-router` 的 `<RouterLink>`
 
-```vue
+``` vue
 <template>
   <header>
     <nav>
@@ -212,9 +212,74 @@ console.log(route.query.id)
 - `navigateTo` 在服务端和客户端都可以使用
 - `vue-router` 仅支持客户端
 
-```ts
+``` ts
 const handleNav = (path: string) => {
     navigateTo({path})
 }
 ```
+
+
+
+## 指定页面路由名称-path
+
+[definePageMeta · Nuxt Utils](https://nuxt.com.cn/docs/api/utils/define-page-meta)
+
+``` ts
+definePageMeta(meta: PageMeta) => void
+
+interface PageMeta {
+  validate?: (route: RouteLocationNormalized) => boolean | Promise<boolean> | Partial<NuxtError> | Promise<Partial<NuxtError>>
+  redirect?: RouteRecordRedirectOption
+  name?: string
+  path?: string
+  alias?: string | string[]
+  pageTransition?: boolean | TransitionProps
+  layoutTransition?: boolean | TransitionProps
+  key?: false | string | ((route: RouteLocationNormalizedLoaded) => string)
+  keepalive?: boolean | KeepAliveProps
+  layout?: false | LayoutKey | Ref<LayoutKey> | ComputedRef<LayoutKey>
+  middleware?: MiddlewareKey | NavigationGuard | Array<MiddlewareKey | NavigationGuard>
+  scrollToTop?: boolean | ((to: RouteLocationNormalizedLoaded, from: RouteLocationNormalizedLoaded) => boolean)
+  [key: string]: unknown
+}
+```
+
+示例：
+
+``` vue
+<script lang='ts' setup>
+definePageMeta({
+    name:'route-name',
+    path:'/route/name'
+})
+</script>
+```
+
+跳转
+
+``` vue
+<script lang='ts' setup>
+
+const handleBtn = () =>{
+    navigateTo({name:'route-name'})
+}
+    
+</script>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

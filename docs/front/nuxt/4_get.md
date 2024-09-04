@@ -2,7 +2,7 @@
 
 ## 服务端和客户端
 
-```ts
+``` ts
 // 只会在 IDE 控制台输出
 if (import.meta.server){
     console.log('server')
@@ -26,7 +26,7 @@ if (import.meta.client){
 
 默认情况下，数据获取的组合函数会在客户端和服务器环境中执行其异步函数。将`server`选项设置为`false`，只在客户端执行调用。与`lazy`选项结合使用，这对于首次渲染不需要的数据（例如，非SEO敏感数据）非常有用。
 
-```ts
+``` ts
 /* 此调用仅在客户端执行 */
 const { status, data: posts } = useFetch('/api/comments', {
   lazy: true,
@@ -38,7 +38,7 @@ const { status, data: posts } = useFetch('/api/comments', {
 
 如果要手动获取或刷新数据，请使用组合函数提供的`execute`或`refresh`函数。
 
-```vue
+``` vue
 <script setup lang="ts">
 const { data, error, execute, refresh } = await useFetch('/api/users')
 </script>
@@ -70,7 +70,7 @@ const { data, error, execute, refresh } = await useFetch('/api/users')
 - `error`：获取失败
 - `success`：获取成功完成
 
-```vue
+``` vue
 <script setup lang="ts">
     
 const {status, data} = await useLazyFetch('/api/cokbok')

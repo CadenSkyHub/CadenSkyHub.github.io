@@ -9,7 +9,7 @@
 
 `post` 请求 `{a:1}`
 
-```ts
+``` ts
 export default defineEventHandler(async (ctx) => {
     const body = await readBody(ctx);
     console.log(body)		// {a:1}
@@ -23,7 +23,7 @@ export default defineEventHandler(async (ctx) => {
 
 `get` 请求 `?a=3&b=4`
 
-```ts
+``` ts
 export default defineEventHandler(async (ctx) => {
     const query = getQuery(ctx)
     console.log(query)	// { a: '3', b: '4' }
@@ -51,7 +51,7 @@ export default defineEventHandler((event) => {
 
 先这样，具体不知道服务器上能不能获取到
 
-```ts
+``` ts
 export default defineEventHandler(async (ctx) => {
     const ip = getRequestIP(ctx, {xForwardedFor: true})
     return {ip};
@@ -62,7 +62,7 @@ export default defineEventHandler(async (ctx) => {
 
 ## 获取路径
 
-```ts
+``` ts
 export default defineEventHandler(async (ctx) => {
     console.log(getRequestURL(ctx).pathname)
 })
@@ -91,7 +91,7 @@ export default defineEventHandler(async (ctx) => {
 
 `/api/cokbok/test`
 
-```ts
+``` ts
 const router = createRouter()
 
 router.get('/test', defineEventHandler(async (ctx)=>{
@@ -109,7 +109,7 @@ export default useBase('/api/cokbok', router.handler)
 
 `/api/cokbok`
 
-```ts
+``` ts
 export default defineEventHandler(async (ctx) => {
     await sendRedirect(ctx, '/api/cokbok/test', 302)
 })
@@ -121,7 +121,7 @@ export default defineEventHandler(async (ctx) => {
 
 `/api/cokbok`
 
-```ts
+``` ts
 export default defineEventHandler(async (ctx) => {
     setResponseStatus(ctx, 201)
     return {
@@ -140,7 +140,7 @@ export default defineEventHandler(async (ctx) => {
 
 要返回其他错误代码，请使用[`createError`](https://nuxt.com.cn/docs/api/utils/create-error)抛出异常：
 
-```ts
+``` ts
 export default defineEventHandler((event) => {
   const id = parseInt(event.context.params.id) as number
 
@@ -165,7 +165,7 @@ export default defineEventHandler((event) => {
 
 `/server/plugin/0-err.ts`
 
-```ts
+``` ts
 export default defineNitroPlugin((nitro) => {
     // error 为运行时钩子，具体所有钩子，请查看上方插件链接
     nitro.hooks.hook("error", async (error, { event }) => {
@@ -204,7 +204,7 @@ export default defineEventHandler((event) => {
 
 `server/middleware/auth.ts`
 
-```ts
+``` ts
 export default defineEventHandler((event) => {
   event.context.auth = { user: 123 }
 })
@@ -223,7 +223,7 @@ event.context.auth.user	// 123
 
 例如，您可以使用 URL 将中间件应用于特定路由：
 
-```ts
+``` ts
 export default defineEventHandler((event) => {
   // 只会在 /auth 路由以及 /auth 子路由上执行
   if (getRequestURL(event).pathname.startsWith('/auth')) {
@@ -244,7 +244,7 @@ Nuxt会自动读取`~/server/plugins`目录中的任何文件，并将它们注�
 
 `server/plugins/nitroPlugin.ts`
 
-```ts
+``` ts
 export default defineNitroPlugin((nitroApp) => {
   console.log('Nitro plugin', nitroApp)
 })
