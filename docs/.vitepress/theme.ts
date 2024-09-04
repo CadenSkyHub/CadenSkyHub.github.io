@@ -7,6 +7,7 @@ import {nodeSideBar} from "../front/node/sidebar";
 import {toolSideBar} from "../tools/sidebar";
 import {databaseSideBar} from "../front/database/sidebar";
 import {directusSidebar} from "../front/directus/sidebar";
+import nuxtSideBar from "../front/nuxt/sideBar";
 import pythonSideBar from "../front/Python/sideBar";
 
 export const themeConfig: DefaultTheme.Config = {
@@ -28,6 +29,7 @@ export const themeConfig: DefaultTheme.Config = {
         '/front/node/': nodeSideBar,
         '/front/database/': databaseSideBar,
         '/front/directus/': directusSidebar,
+        '/front/nuxt/': nuxtSideBar,
         '/front/Python/': pythonSideBar,
         '/tools': toolSideBar,
     },

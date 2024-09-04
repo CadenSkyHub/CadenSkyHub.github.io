@@ -13,6 +13,7 @@ export const nav: DefaultTheme.NavItem[] = [
                     {text: 'TypeScript', link: '/front/typescript/1_begin'},
                     {text: 'Node', link: '/front/node/1_base/1_npm'},
                     {text: 'Directus', link: '/front/directus/0_start'},
+                    {text: 'Nuxt', link: '/front/nuxt/0_start'},
                 ]
             },
             {
