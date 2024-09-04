@@ -44,13 +44,13 @@ npm init -y
 
 在根目录
 
-```bash
+``` bash
 touch app.vue
 ```
 
 app.vue
 
-```vue
+``` vue
 <template>
   <div>
     <NuxtLayout>
@@ -66,14 +66,14 @@ app.vue
 
 这里的 `pages` 和 `index.vue` 为 **固定名称**， 具体参考官网
 
-```bash
+``` bash
 mkdir pages && cd pages
 touch index.vue
 ```
 
 ## 运行
 
-```bash
+``` bash
 npm run dev
 ```
 
@@ -107,13 +107,13 @@ npm run dev
 
 安装
 
-```bash
+``` bash
 npm install sass
 ```
 
 局部使用
 
-```scss
+``` scss
 <style scoped lang="scss">
 @use "assets/css/main";
 </style>
@@ -121,7 +121,7 @@ npm install sass
 
 全局使用，需要在 `nuxt.config.ts` 中配置
 
-```ts
+``` ts
 export default defineNuxtConfig({
     css: ['~/assets/css/main.scss'],
     // @/assets/css/main.scss 也可以
