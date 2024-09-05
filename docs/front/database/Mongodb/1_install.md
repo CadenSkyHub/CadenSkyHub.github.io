@@ -1,5 +1,7 @@
 # 安装
 
+[官方文档](https://www.mongodb.com/zh-cn/docs/manual/introduction/)
+
 ## docker 安装
 
 - `mongo` 主程序
@@ -49,5 +51,41 @@ mongo -u root -p 123456
 mongodb://user:password@host:[port]/[database]
 ```
 
+
+## javascript 使用
+
+[使用文档](https://www.mongodb.com/zh-cn/docs/drivers/node/current/quick-start/)
+
+``` bash
+npm install mongodb
+```
+
+注意
+
+```ts
+import {MongoClient} from "mongodb";
+
+const uri = "mongodb://root:password@10.10.10.10:27017";
+
+const client = new MongoClient(uri)
+
+
+async function main(){
+    try{
+        const database = client.db('learn')
+        const col = database.collection('learn')
+        const res = col.find()
+        // 查询所有
+        // find() 返回游标，需要遍历才能拿到数据，其他的不需要
+        for await (const doc of res){
+            console.log(doc)
+        }
+    }finally {
+        await client.close()
+    }
+}
+
+main()
+```
 
 
