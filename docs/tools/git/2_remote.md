@@ -169,16 +169,31 @@ git remote -v
 [参考](https://engineeringfordatascience.com/posts/how_to_manage_multiple_git_accounts_on_the_same_machine/)
 
 ```
-Host caden.github.com		// Host 需要区分一下。也可以直接写成 caden
+Host caden.github.com		// Host 需要区分一下。
 HostName github.com			// 不用动
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/caden	// 该账户的key位置要正确
 
-Host emma.github.com		// Host 需要区分一下,也可以直接写成 emma
+Host emma.github.com		// Host 需要区分一下。
 HostName github.com			// 不用动
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/emma	// 该账户的key位置要正确
 ```
+
+::: warning 注意
+
+我这里写
+
+```
+Host caden
+...
+
+Host emma
+```
+
+是无法使用的，尽量完整写 `caden.github.io/emma.github.io`
+
+:::
 
 
 
