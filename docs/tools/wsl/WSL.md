@@ -242,6 +242,8 @@ wsl --import <Distribution Name> <InstallLocation> <FileName>
 
 1. 在WSL中新建一个用户，按照提示设置密码和其他信息。
 
+**在配置之前，请提前设置好 root 账户的密码**
+
 ```bash
 adduser newuser
 ```
