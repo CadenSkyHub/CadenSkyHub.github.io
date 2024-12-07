@@ -240,22 +240,28 @@ wsl --import <Distribution Name> <InstallLocation> <FileName>
 
 如果不希望一进子系统就是`root`账户，可参考以下方式修改
 
-1. 打开WSL终端。
+1. 在WSL中新建一个用户，按照提示设置密码和其他信息。
 
-2. 以root用户身份编辑 `/etc/wsl.conf` 文件。您可以使用 `nano` 或 `vim` 等文本编辑器进行编辑。例如，使用 `nano`：
+```bash
+adduser newuser
+```
+
+2. 打开WSL终端。
+
+3. 以root用户身份编辑 `/etc/wsl.conf` 文件。您可以使用 `nano` 或 `vim` 等文本编辑器进行编辑。例如，使用 `nano`：
 
    ```bash
    sudo nano /etc/wsl.conf
    ```
 
-3. 在文件中添加以下内容（如果文件不存在，则创建该文件）：
+4. 在文件中添加以下内容（如果文件不存在，则创建该文件）：
 
    ```bash
    [user]
    default=newuser
    ```
 
-4. 请将 `newuser` 替换为您希望将默认用户更改为的用户名。
+5. 请将 `newuser` 替换为您希望将默认用户更改为的用户名。
 
    - 保存文件并退出编辑器。
    - 重新启动WSL，或者可以尝试重新打开一个新的WSL终端。
