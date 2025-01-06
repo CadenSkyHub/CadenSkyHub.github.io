@@ -240,14 +240,13 @@ wsl --import <Distribution Name> <InstallLocation> <FileName>
 
 如果不希望一进子系统就是`root`账户，可参考以下方式修改
 
-::: [!caution] 注意
-**在配置之前，请提前设置好 root 账户的密码**
+> [!caution] 注意
+> **在配置之前，请提前设置好 root 账户的密码**
+> 
+> ```bash
+> sudo passwd root
+> ```
 
-```bash
-sudo passwd root
-```
-
-:::
 
 1. 在WSL中新建一个用户，按照提示设置密码和其他信息。
 
