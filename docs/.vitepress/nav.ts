@@ -21,6 +21,7 @@ export const nav: DefaultTheme.NavItem[] = [
               items:[
                   {text: 'Mongodb', link: '/front/database/Mongodb/1_install'},
                   {text: 'Redis', link: '/front/database/redis/1_begin'},
+                  {text: 'Postgresql', link: '/front/database/postgres/postgresql'},
               ]
             },
             {

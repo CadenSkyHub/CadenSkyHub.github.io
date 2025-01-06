@@ -31,5 +31,9 @@ export const databaseSideBar: DefaultTheme.SidebarItem[] = [
             {text: '有序集合', link: '/front/database/redis/7_sortedSet'},
             {text: 'node-redis', link: '/front/database/redis/10_node-redis'},
         ]
+    },
+    {
+        text:'Postgresql',
+        link:'/front/database/postgres/postgresql'
     }
 ]
