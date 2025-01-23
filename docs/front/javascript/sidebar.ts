@@ -31,10 +31,11 @@ export const javascriptSideBar: DefaultTheme.SidebarItem[] = [
         collapsed: true
     },
     {
-        text: '内置方法',
+        text: '常用库',
         items: [
             { text: 'Math', link: '/front/javascript/3_methods/1_math' },
             { text: 'Date', link: '/front/javascript/3_methods/2_date' },
+            { text: 'Other', link: '/front/javascript/3_methods/3_other' },
         ],
         collapsed: true
     },
