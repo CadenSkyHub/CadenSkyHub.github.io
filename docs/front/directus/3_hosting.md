@@ -1,5 +1,9 @@
 # 自托管
 
+## 全部配置
+
+
+
 [文档](https://docs.directus.io/self-hosted/quickstart.html)
 
 `SECRET`：是必需的，并且应该是一个安全的随机值，它用于对令牌进行签名。
@@ -64,6 +68,7 @@ DB_USER="directus"
 DB_PASSWORD="password"
 
 # cors
+# 关闭 cors
 CORS_ENABLED=true
 
 
@@ -98,3 +103,55 @@ docker run \
 directus/directus
 ```
 
+
+
+## 使用 `config` 配置文件
+
+``` json
+// 本地 /database/config.json
+
+{
+    "CORS_ENABLED":true,
+    "CORS_ORIGIN": ["http://localhost:3000", "http://localhost:3000","https://10.10.10.102:3000", "http://10.10.10.178:3000"]
+}
+```
+
+
+
+向 `directus` 添加配置文件，详细的配置内容：[配置信息](https://docs.directus.io/self-hosted/config-options.html)，其中重要的是 `cors`, 
+
+1. 首先在本地 `/directus/database` 文件夹中添加文件 `config.json`
+
+2. 然后在 `docker` 启动中，添加：
+
+    ```bash
+    docker run --name directus -d \
+        -v $PWD/database:/directus/database \
+        -v $PWD/uploads:/directus/uploads \
+        -v $PWD/extensions:/directus/extensions \
+        -v $PWD/templates:/directus/templates \
+        -p 8055:8055 \
+        -e CONFIG_PATH="/directus/database/config.json" \
+        -e ADMIN_EMAIL="admin@admin.com" \
+        -e ADMIN_PASSWORD="password" \
+        --restart=always \
+    	directus/directus
+    ```
+
+    ::: details PowerShell
+
+    ``` powershell
+    docker run --name directus -d `
+        -v "$PWD/database:/directus/database" `
+        -v "$PWD/uploads:/directus/uploads" `
+        -v "$PWD/extensions:/directus/extensions" `
+        -v "$PWD/templates:/directus/templates" `
+        -p 8055:8055 `
+        -e CONFIG_PATH="/directus/database/config.json" `
+        -e ADMIN_EMAIL="admin@admin.com" `
+        -e ADMIN_PASSWORD="password" `
+        --restart=always `
+        directus/directus
+    ```
+
+    :::

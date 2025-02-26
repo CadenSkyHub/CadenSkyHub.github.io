@@ -81,8 +81,6 @@ nginx
 
 
 
-
-
 ## phpmyadmin
 
 ``` bash
@@ -400,4 +398,17 @@ jupyter server list
 **然后复制`token`粘贴在以下令牌部分，然后设置新密码**
 
 ![image-20240722002747420](./assets/image-20240722002747420.png)
+
+## Memos
+
+官网： [官方网站](https://www.usememos.com/)
+
+``` bash
+docker run -d \
+  --init \
+  --name memos \
+  -p 5230:5230 \
+  -v $PWD/memos:/var/opt/memos \
+  neosmemo/memos:stable
+```
 
