@@ -412,3 +412,36 @@ docker run -d \
   neosmemo/memos:stable
 ```
 
+
+
+## Umami
+
+官网：[官方网站](https://umami.is/docs)
+
+```powershell
+docker pull docker.umami.is/umami-software/umami:mysql-latest
+
+docker run --name umami `
+        -d `
+        -p 3010:3000 `
+        -e DATABASE_URL=mysql://umami:000000@10.10.10.10:3306/umami `
+        -e DISABLE_TELEMETRY=0 `
+        --restart=always `
+        -d `
+        docker.umami.is/umami-software/umami:mysql-latest
+```
+
+数据库迁移报错解决：[sql控制台执行](https://github.com/umami-software/umami/issues/2645#issuecomment-2564277898)
+
+```sql
+UPDATE _prisma_migrations
+SET finished_at = NOW(), logs = NULL, applied_steps_count = 1 
+WHERE migration_name = '05_add_visit_id';
+
+----------
+
+UPDATE _prisma_migrations
+SET finished_at = NOW(), logs = NULL, applied_steps_count = 1 
+WHERE migration_name = '06_add_visit_id';
+```
+
