@@ -442,6 +442,6 @@ WHERE migration_name = '05_add_visit_id';
 
 UPDATE _prisma_migrations
 SET finished_at = NOW(), logs = NULL, applied_steps_count = 1 
-WHERE migration_name = '06_add_visit_id';
+WHERE migration_name = '06_session_data';
 ```
 
