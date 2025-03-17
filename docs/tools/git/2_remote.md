@@ -66,8 +66,8 @@ PubkeyAcceptedAlgorithms +ssh-rsa
 
 ```
 # github
-Host github.com				# github 服务器地址，Host和HostName 尽量一致
-HostName github.com			# github 服务器名称，Host和HostName 尽量一致
+Host github.com            # 如果是多个账户，请查看多账户
+HostName github.com			#  服务器地址
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/one		# 指定 github 的私钥位置
 ```
