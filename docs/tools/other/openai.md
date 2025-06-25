@@ -11,7 +11,7 @@ import { zodResponseFormat } from 'openai/helpers/zod.mjs';
 const result = ref()
 
 const client = new OpenAI({
-  apiKey: 'sk-YmUOutbGDWb1FNzH1828B60503694d2e991aB7B23f433613',
+  apiKey: 'xxx',
   baseURL: 'https://api.gpt.ge/v1',
   dangerouslyAllowBrowser: true
 })
