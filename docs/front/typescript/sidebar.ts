@@ -12,4 +12,5 @@ export const typescriptSideBar: DefaultTheme.SidebarItem[] = [
     { text: '泛型', link: '/front/typescript/9_generics' },
     { text: '枚举', link: '/front/typescript/10_enum' },
     { text: '断言', link: '/front/typescript/11_type_of_assertion' },
+    { text: '高级', link: '/front/typescript/12_advanced' },
 ]
