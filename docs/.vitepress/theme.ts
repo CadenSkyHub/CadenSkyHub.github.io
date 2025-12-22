@@ -1,12 +1,13 @@
-import {DefaultTheme} from "vitepress";
-import {nav} from "./nav";
-import {vitePressSideBar} from "../vitepress/sidebar";
-import {javascriptSideBar} from "../front/javascript/sidebar";
-import {typescriptSideBar} from "../front/typescript/sidebar";
-import {nodeSideBar} from "../front/node/sidebar";
-import {toolSideBar} from "../tools/sidebar";
-import {databaseSideBar} from "../front/database/sidebar";
-import {directusSidebar} from "../front/directus/sidebar";
+import { DefaultTheme } from "vitepress";
+import { nav } from "./nav";
+import { vitePressSideBar } from "../vitepress/sidebar";
+import { javascriptSideBar } from "../front/javascript/sidebar";
+import { typescriptSideBar } from "../front/typescript/sidebar";
+import { nodeSideBar } from "../front/node/sidebar";
+import { toolSideBar } from "../tools/sidebar";
+import { databaseSideBar } from "../front/database/sidebar";
+import { directusSidebar } from "../front/directus/sidebar";
+import tailwindcssSidebar from "../front/Tailwindcss/sidebar"
 import nuxtSideBar from "../front/nuxt/sideBar";
 import pythonSideBar from "../front/Python/sideBar";
 
@@ -31,6 +32,7 @@ export const themeConfig: DefaultTheme.Config = {
         '/front/directus/': directusSidebar,
         '/front/nuxt/': nuxtSideBar,
         '/front/Python/': pythonSideBar,
+        '/front/Tailwindcss': tailwindcssSidebar,
         '/tools': toolSideBar,
     },
 
@@ -71,7 +73,7 @@ export const themeConfig: DefaultTheme.Config = {
         quote: '这里一片荒原……'
     },
     socialLinks: [
-        {icon: 'github', link: 'https://github.com/CadenSkyHub'}
+        { icon: 'github', link: 'https://github.com/CadenSkyHub' }
     ],
     editLink: {
         pattern: 'https://github.com/CadenSkyHub/CadenSkyHub.github.io/tree/main/docs/:path',
